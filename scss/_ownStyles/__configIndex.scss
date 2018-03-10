@@ -1,0 +1,42 @@
+.section__backgroundVideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--video{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        &>source{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &--text{
+        position: absolute;
+        color: white;
+        text-align: center;
+        &>h1{
+            font-size: 80px;
+        }
+    }
+}
+
+.div__about{
+    width: 100%;
+    font-size: 20px;
+    .section__about{
+        padding-top: 4rem;
+        width: 100%;
+        height: 50vh;
+        &>div>img{
+            padding-top: 100px;
+            width: 200px;
+        }
+    }
+}
+
+.section__contact{
+    padding-top: 50px;
+}
+
