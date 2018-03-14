@@ -3118,7 +3118,7 @@ nav {
     position: relative;
     z-index: 1;
     height: 56px;
-    margin: 0 18px; }
+    margin: 0 20px; }
     nav .button-collapse i {
       height: 56px;
       line-height: 56px; }
@@ -3178,7 +3178,9 @@ nav {
           height: inherit;
           line-height: inherit; }
       nav ul a:hover {
-        background-color: rgba(0, 0, 0, 0.1); }
+        background-color: #cfd8dc;
+        color: #212121;
+        border-bottom: 0.3em solid #06a0ff; }
     nav ul.left {
       float: left; }
   nav form {
@@ -6919,11 +6921,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     width: 100%;
     height: 100%;
     display: block;
-    position: relative; }
+    position: relative;
+    opacity: .9; }
     .section__backgroundVideo--video > source {
       width: 100%;
       height: auto; }
   .section__backgroundVideo--text {
+    width: 100%;
+    background-color: #cfd8dc22;
     position: absolute;
     color: white;
     text-align: center; }
@@ -6940,6 +6945,166 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     .div__about .section__about > div > img {
       padding-top: 100px;
       width: 200px; }
+    .div__about .section__about > div > .section__home--me {
+      font-size: 22px;
+      margin: 0 250px; }
+      .div__about .section__about > div > .section__home--me > p > strong {
+        font-size: 25px;
+        color: #2768d9; }
 
 .section__contact {
   padding-top: 50px; }
+  .section__contact > div > h4 {
+    padding-top: 1.5em; }
+
+@media screen and (max-width: 480px) {
+  .section__backgroundVideo {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section__backgroundVideo--video {
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      position: relative; }
+      .section__backgroundVideo--video > source {
+        width: 100%;
+        height: auto; }
+    .section__backgroundVideo--text {
+      position: absolute;
+      color: white;
+      text-align: center; }
+      .section__backgroundVideo--text > h1 {
+        font-size: 50px; }
+      .section__backgroundVideo--text > h3 {
+        font-size: 30px; }
+  .div__about {
+    width: 100%;
+    font-size: 18px; }
+    .div__about .section__about {
+      padding-top: 1rem;
+      width: 100%;
+      height: 50vh; }
+      .div__about .section__about > div > img {
+        padding-top: 1.3rem;
+        width: 180px; }
+      .div__about .section__about > div > h1 {
+        font-size: 40px; }
+      .div__about .section__about > div > h4 {
+        font-size: 28px; }
+      .div__about .section__about > div > .section__home--me {
+        font-size: 20px;
+        margin: 0; } }
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .section__backgroundVideo {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section__backgroundVideo--video {
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      position: relative; }
+      .section__backgroundVideo--video > source {
+        width: 100%;
+        height: auto; }
+    .section__backgroundVideo--text {
+      position: absolute;
+      color: white;
+      text-align: center; }
+      .section__backgroundVideo--text > h1 {
+        font-size: 60px; }
+      .section__backgroundVideo--text > h3 {
+        font-size: 40px; }
+  .div__about {
+    width: 100%;
+    font-size: 18px; }
+    .div__about .section__about {
+      padding-top: 1rem;
+      width: 100%;
+      height: 50vh; }
+      .div__about .section__about > div > img {
+        padding-top: 1.3rem;
+        width: 180px; }
+      .div__about .section__about > div > h1 {
+        font-size: 40px; }
+      .div__about .section__about > div > h4 {
+        font-size: 28px; }
+      .div__about .section__about > div > .section__home--me {
+        font-size: 20px;
+        margin: 0; } }
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .section__backgroundVideo {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section__backgroundVideo--video {
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      position: relative; }
+      .section__backgroundVideo--video > source {
+        width: 100%;
+        height: auto; }
+    .section__backgroundVideo--text {
+      position: absolute;
+      color: white;
+      text-align: center; }
+      .section__backgroundVideo--text > h1 {
+        font-size: 60px; }
+      .section__backgroundVideo--text > h3 {
+        font-size: 40px; }
+  .div__about {
+    width: 100%;
+    font-size: 18px; }
+    .div__about .section__about {
+      padding-top: 1rem;
+      width: 100%;
+      height: 50vh; }
+      .div__about .section__about > div > img {
+        padding-top: 1.3rem;
+        width: 180px; }
+      .div__about .section__about > div > h1 {
+        font-size: 45px; }
+      .div__about .section__about > div > h4 {
+        font-size: 28px; }
+      .div__about .section__about > div > .section__home--me {
+        font-size: 20px;
+        margin: 0; } }
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .section__backgroundVideo {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section__backgroundVideo--video {
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      position: relative; }
+      .section__backgroundVideo--video > source {
+        width: 100%;
+        height: auto; }
+    .section__backgroundVideo--text {
+      position: absolute;
+      color: white;
+      text-align: center; }
+      .section__backgroundVideo--text > h1 {
+        font-size: 75px; }
+      .section__backgroundVideo--text > h3 {
+        font-size: 50px; }
+  .div__about {
+    width: 100%;
+    font-size: 18px; }
+    .div__about .section__about {
+      padding-top: 1rem;
+      width: 100%;
+      height: 50vh; }
+      .div__about .section__about > div > img {
+        padding-top: 5em;
+        width: 180px; }
+      .div__about .section__about > div > .section__home--me {
+        font-size: 20px;
+        margin: 0 150px; } }

@@ -2,22 +2,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
     &--video{
         width: 100%;
         height: 100%;
         display: block;
         position: relative;
+        opacity: .9;
         &>source{
             width: 100%;
             height: auto;
         }
     }
     &--text{
+        width: 100%;
+        background-color: #cfd8dc22;
         position: absolute;
-        color: white;
+        color:rgb(255, 255, 255);
         text-align: center;
         &>h1{
             font-size: 80px;
+
         }
     }
 }
@@ -32,11 +37,22 @@
         &>div>img{
             padding-top: 100px;
             width: 200px;
+        }    
+        &>div>.section__home--me{
+            font-size: 22px;
+            margin: 0 250px;
+            &>p>strong{
+                font-size: 25px;
+                color: rgb(39, 104, 217);
+            }
         }
     }
 }
 
 .section__contact{
     padding-top: 50px;
+    &>div>h4{
+        padding-top: 1.5em; 
+    }
 }
 
