@@ -15,7 +15,7 @@
         <header>
             <div class="navbar-fixed">
                 <nav>
-                    <div class="nav-wrapper orange darken-3">
+                    <div class="nav-wrapper black">
                         <!-- <a href="#!" class="brand-logo">PABLO</a> -->
                         <a href="#" data-activates="mobile-demo" class="button-collapse">
                             <i class="material-icons">menu</i>
@@ -38,7 +38,7 @@
                 </nav>
             </div>
 
-                 <ul class="side-nav" id="mobile-demo">
+                 <ul class="side-nav blue-grey lighten-4" id="mobile-demo">
                     <li>
                         <a href="#home"><i class="material-icons">home</i>Home</a>
                     </li>
@@ -70,31 +70,32 @@
                     <div class="section__about" id="about">
                         <div class="col s12 m12 l12 xl12 ">
                             <h1>¿Qué hago?</h1>
+                            <h4>Diseñador Front End / Jr. Front End Designer</h4>
                         </div>
                         <div class="col s12 m12 l12 xl12 align-center">
                             <div class="section__home--me center-align">
-                               <h4>Diseñador Front End / Front End Designer Jr.</h4>
-                               <p>Mi nombre es Pablo Lagger, actualmente me encuentro trabajando como diseñador Front End freelance.</p>
-                               <p>Busco dar solución a tus necesidades web a través de mis conocimientos.</p>
+                               <p>Hola! mi nombre es <strong>Pablo Lagger</strong>, tengo 20 años, soy estudiante de Licenciatura en Gestión de Tecnología de la Información y actualmente me encuentro trabajando como diseñador Front End freelance.</p>
+                               <p>Tengo un alto interés por las tecnologias web Front End, por lo que me encuentro constantemente actualizándome.</p>
+                               <p>Busco dar solución a tus necesidades digitales a través de mis conocimientos.</p>
                             </div>
                         </div>
                         <div class="col s12 m12 l4 xl4 wow bounceInLeft">
-                            <img src="media/img/responsiveDesing.png" alt="">
+                            <img src="media/img/responsiveDesing.png" alt="responsive">
                             <p>Diseño responsive para que su página pueda visualizarse en todos los dispositivos.</p>
                         </div>
                         <div class="col s12 m12 l4 xl4 wow bounceInUp">
-                            <img src="media/img/icon.png" alt="">
-                            <p>Conocimiento de HTML5, CSS3, Sass, Bootstrap 3, Bootstrap 4, Materialize...</p>
+                            <img src="media/img/icon.png" alt="front enf">
+                            <p>Conocimiento de HTML5, CSS3, Javascript, Sass, Bootstrap 3, Bootstrap 4, Materialize...</p>
                         </div>
                         <div class="col s12 m12 l4 xl4 wow bounceInRight">
-                            <img src="media/img/hostIcon.png" alt="">
+                            <img src="media/img/hostIcon.png" alt="hosting">
                             <p>Alta y subida a servidores hosting y correo con soporte 24/7.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="section__works" id="works">
                     <div class="col s12 m12 l4 xl4">
                         <div class="card wow shake">
@@ -202,50 +203,40 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="section__contact">
                 <div class="row blue-grey lighten-5">
-                    <h4 class="align-left">Contacto:</h4>
+                    <h4 class="align-left center-align">Contacto</h4>
                     <div class="section__contact" id="contact">
                         <form class="col s6 offset-s3">
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                                    <label for="first_name">First Name</label>
+                                    <input placeholder="Su nombre" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Nombre</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="last_name" type="text" class="validate">
-                                    <label for="last_name">Last Name</label>
+                                    <input placeholder="Su apellido" id="last_name" type="text" class="validate">
+                                    <label for="last_name">Apellido</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                                    <label for="disabled">Disabled</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="password" type="password" class="validate">
-                                    <label for="password">Password</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email" type="email" class="validate">
+                                    <input placeholder="Su email" id="email" type="email" class="validate">
                                     <label for="email">Email</label>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col s12">
-                                    This is an inline input field:
-                                    <div class="input-field inline">
-                                        <input id="email" type="email" class="validate">
-                                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                        <label for="textarea1">Su mensaje</label>
                                     </div>
                                 </div>
+
+                            <div class="row right-align">
+                                <a class="btn">Enviar</a>
                             </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -263,10 +254,10 @@
                         <h5 class="white-text">Links</h5>
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                                <a class="grey-text text-lighten-3" href="#!">Github</a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                                <a class="grey-text text-lighten-3" href="#!">Linkedin</a>
                             </li>
                             <li>
                                 <a class="grey-text text-lighten-3" href="#!">Link 3</a>

@@ -47,7 +47,7 @@ nav {
     position: relative;
     z-index: 1;
     height: $navbar-height-mobile;
-    margin: 0 18px;
+    margin: 0 20px;
 
     i {
       height: $navbar-height-mobile;
@@ -139,8 +139,17 @@ nav {
         }
       }
 
+
+      ////////////////////////////////////////////////////////////////////////////////////////
+      ///////////////////* 
+      //////////////////-> CODIGO CAMBIADO | SE CAMBIO :hover DEL <-\\\\\\\\\\\\\\\\\\\\\\\\\\
+      //////////////////-> NAVBAR Y SE AGREGO color AL HACER :hover <-\\\\\\\\\\\\\\\\\\\\\\\\
+      //////////////////*/
+      ////////////////////////////////////////////////////////////////////////////////////////
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: #cfd8dc; 
+        color: rgb(33, 33, 33);
+        border-bottom: .3em solid rgb(6, 160, 255);
       }
     }
 
