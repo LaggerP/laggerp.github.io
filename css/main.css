@@ -6957,6 +6957,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .section__contact > div > h4 {
     padding-top: 1.5em; }
 
+.img__footer {
+  width: 30px;
+  padding-right: 10px; }
+
 @media screen and (max-width: 480px) {
   .section__backgroundVideo {
     display: flex;
@@ -7007,8 +7011,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
       display: block;
       position: relative; }
       .section__backgroundVideo--video > source {
-        width: 100%;
-        height: auto; }
+        min-width: 100%;
+        min-height: 100%; }
     .section__backgroundVideo--text {
       position: absolute;
       color: white;
