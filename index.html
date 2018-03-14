@@ -54,9 +54,19 @@
                 </ul>
         </header>
         <section>
+
+    
+            <!-- M4V for Apple -->
+            <source type="video/mp4" src="assets/vid/PhysicsEtoys.m4v" />
+            <!-- Ogg/Vorbis for older Firefox and Opera versions -->
+            <source type="video/ogg" src="assets/vid/PhysicsEtoys.ogv" />
             <div class="section__backgroundVideo" id="home">
                 <video class="section__backgroundVideo--video" autoplay loop>
                     <source src="media/video/backgroundVideo.mp4" type="video/mp4">
+                    <source src="media/video/backgroundVideo.webm" type="video/webm">
+                    <source src="media/video/backgroundVideo.m4v" type="video/mp4">
+                    <source src="media/video/backgroundVideo.ogv" type="video/ogg">
+                    Your browser does not support the video tag.
                 </video>
                 <div class="section__backgroundVideo--text wow bounceInRight">
                     <h1>Pablo Lagger</h1>
@@ -247,23 +257,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                        <h5 class="white-text">LaggerP</h5>
+                        <p class="grey-text text-lighten-4">Jr. Front End Designer</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Github</a>
+                                <a class="grey-text text-lighten-3" href="#!"><img class="img__footer" src="media/img/GitHub.png" alt=""> Github</a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Linkedin</a>
+                                <a class="grey-text text-lighten-3" href="#!"><img class="img__footer" src="media/img/linkedin.png" alt=""> Linkedin</a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                                <a class="grey-text text-lighten-3" href="#!"><img class="img__footer" src="media/img/CV.png" alt=""> Descargar CV</a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                                <a class="grey-text text-lighten-3" href="#!"></a>
                             </li>
                         </ul>
                     </div>
@@ -271,8 +281,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    © 2018 Lagger Pablo
                 </div>
             </div>
         </footer>
@@ -282,7 +291,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/bin/materialize.js"></script>
     <script src="js/ownJs/typed.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>    
