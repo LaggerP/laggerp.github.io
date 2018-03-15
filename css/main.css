@@ -3178,9 +3178,9 @@ nav {
           height: inherit;
           line-height: inherit; }
       nav ul a:hover {
-        background-color: #cfd8dc;
+        background-color: #ffffffbe;
         color: #212121;
-        border-bottom: 0.3em solid #06a0ff; }
+        border-bottom: .2em solid #06a0ff; }
     nav ul.left {
       float: left; }
   nav form {
@@ -4367,8 +4367,8 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a; }
+    border-bottom: 1px solid #03a9f4;
+    box-shadow: 0 1px 0 0 #03a9f4; }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -4382,7 +4382,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #26a69a; }
+    color: #03a9f4; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=password]:not(.browser-default).validate + label,
@@ -4629,7 +4629,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #26a69a; }
+      color: #03a9f4; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -5358,7 +5358,7 @@ input[type=range]:focus::-ms-fill-upper {
   height: calc(100% + 60px);
   height: -moz-calc(100%);
   padding-bottom: 60px;
-  background-color: #fff;
+  background-color: white;
   z-index: 999;
   overflow-y: auto;
   will-change: transform;
@@ -5385,7 +5385,8 @@ input[type=range]:focus::-ms-fill-upper {
     line-height: 48px;
     padding: 0 32px; }
     .side-nav li > a:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
+      background-color: #06a0ff;
+      border-bottom: 0.2em solid #06a0ff; }
     .side-nav li > a.btn, .side-nav li > a.btn-large, .side-nav li > a.btn-large, .side-nav li > a.btn-flat, .side-nav li > a.btn-floating {
       margin: 10px 15px; }
     .side-nav li > a.btn, .side-nav li > a.btn-large, .side-nav li > a.btn-large, .side-nav li > a.btn-floating {
@@ -5492,7 +5493,7 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #ee6e73; }
   .side-nav .collapsible-body > ul:not(.collapsible) > li.active a,
   .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active a {
-    color: #fff; }
+    color: white; }
 
 .side-nav .collapsible-body {
   padding: 0; }
@@ -5503,7 +5504,7 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   right: 0;
   height: 120vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.367);
   z-index: 997;
   will-change: opacity; }
 
@@ -6938,6 +6939,18 @@ body {
     .section__backgroundVideo--text > h1 {
       font-size: 80px; }
 
+.blinking-cursor {
+  font-weight: 100px;
+  font-size: 40px;
+  color: #2E3D48;
+  animation: 1s blink step-end infinite; }
+
+@keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
 .div__about {
   width: 100%;
   font-size: 20px; }
@@ -6945,9 +6958,41 @@ body {
     padding-top: 4rem;
     width: 100%;
     height: 50vh; }
+    .div__about .section__about > div > .div__about--tecnologies > div {
+      margin-top: 500px; }
+    .div__about .section__about > div > h5 {
+      position: relative;
+      padding-top: 50px;
+      text-decoration: underline;
+      text-decoration-color: #06a0ff;
+      text-shadow: 1px 0.5px #474646; }
     .div__about .section__about > div > img {
       padding-top: 100px;
       width: 200px; }
+    .div__about .section__about > .div__about--tecnologies > div > h5 {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      text-decoration: underline;
+      text-decoration-color: #06a0ff;
+      text-shadow: 1px 0.5px #474646; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies1 {
+      width: 100px;
+      margin: 5px 10px; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies2 {
+      width: 95px;
+      margin: 0 10px; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies3 {
+      width: 80px;
+      margin: 0 10px; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies4 {
+      width: 90px;
+      margin: 0 10px; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies5 {
+      width: 100px;
+      margin: 0 10px; }
+    .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies6 {
+      width: 100px;
+      margin: 0 10px; }
     .div__about .section__about > div > .section__home--me {
       font-size: 22px;
       margin: 0 250px; }
@@ -6963,6 +7008,10 @@ body {
 .img__footer {
   width: 30px;
   padding-right: 10px; }
+
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg); }
 
 @media screen and (max-width: 480px) {
   .section__backgroundVideo {
@@ -6986,11 +7035,21 @@ body {
         font-size: 50px; }
       .section__backgroundVideo--text > h3 {
         font-size: 30px; }
+  .blinking-cursor {
+    font-weight: 90px;
+    font-size: 30px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite; }
+  @keyframes blink {
+    from, to {
+      color: transparent; }
+    50% {
+      color: white; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 1rem;
+      padding-top: 3rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
@@ -7025,11 +7084,21 @@ body {
         font-size: 60px; }
       .section__backgroundVideo--text > h3 {
         font-size: 40px; }
+  .blinking-cursor {
+    font-weight: 90px;
+    font-size: 40px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite; }
+  @keyframes blink {
+    from, to {
+      color: transparent; }
+    50% {
+      color: white; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 1rem;
+      padding-top: 3rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
@@ -7064,11 +7133,21 @@ body {
         font-size: 60px; }
       .section__backgroundVideo--text > h3 {
         font-size: 40px; }
+  .blinking-cursor {
+    font-weight: 90px;
+    font-size: 40px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite; }
+  @keyframes blink {
+    from, to {
+      color: transparent; }
+    50% {
+      color: white; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 1rem;
+      padding-top: 3rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
@@ -7102,7 +7181,17 @@ body {
       .section__backgroundVideo--text > h1 {
         font-size: 75px; }
       .section__backgroundVideo--text > h3 {
-        font-size: 50px; }
+        font-size: 40px; }
+  .blinking-cursor {
+    font-weight: 90px;
+    font-size: 45px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite; }
+  @keyframes blink {
+    from, to {
+      color: transparent; }
+    50% {
+      color: white; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
