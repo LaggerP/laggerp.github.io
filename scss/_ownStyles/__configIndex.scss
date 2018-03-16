@@ -1,5 +1,6 @@
 body{
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 .section__backgroundVideo{
     display: flex;
@@ -22,29 +23,28 @@ body{
         position: absolute;
         color:rgb(255, 255, 255);
         text-align: center;
+        text-shadow: 1px 2px rgb(71, 70, 70);        
         &>h1{
             font-size: 80px;
-
+            font-family: 'Ubuntu', sans-serif;
         }
     }
 }
 
-    .blinking-cursor {
+.blinking-cursor {
     font-weight: 100px;
     font-size: 40px;
-    color: #2E3D48;
+    color: #06a0ff;
     animation: 1s blink step-end infinite;
     }
-
     @keyframes blink {
     from, to {
-        color: transparent;
+        color: #cfd8dc22;
     }
     50% {
-        color: rgb(255, 255, 255);
+        color: #06a0ff;
     }
 }
-
 
 .div__about{
     width: 100%;
@@ -64,7 +64,7 @@ body{
             text-shadow: 1px .5px rgb(71, 70, 70);
         }
         &>div>img{
-            padding-top: 100px;
+            padding-top: 40px;
             width: 200px;
         }
 
@@ -81,39 +81,48 @@ body{
         }
         &>.div__about--tecnologies>div>.img__tecnologies2{
             width: 95px;
-            margin: 0 10px;
+            margin: 0 10px;           
         }  
         &>.div__about--tecnologies>div>.img__tecnologies3{
             width: 80px;
-            margin: 0 10px;
+            margin: 0 10px;          
         }
         &>.div__about--tecnologies>div>.img__tecnologies4{
             width: 90px;
-            margin: 0 10px;
+            margin: 0 10px;         
         }  
         &>.div__about--tecnologies>div>.img__tecnologies5{
             width: 100px;
-            margin: 0 10px;
+            margin: 0 10px;          
         }                                        
         &>.div__about--tecnologies>div>.img__tecnologies6{
             width: 100px;
-            margin: 0 10px;
+            margin: 0 10px;        
         }  
-        &>div>.section__home--me{
-            font-size: 22px;
+        &>div>.section__about--me{
+            font-size: 25px;
             margin: 0 250px;
+            font-family: 'Open Sans', sans-serif;
             &>p>strong{
                 font-size: 25px;
-                color: rgb(39, 104, 217);
+                color: #06a0ff;
+                text-decoration: underline;
             }
         }
     }
 }
 
+
+.section__works{
+    padding-top: 60px;
+}
 .section__contact{
     padding-top: 50px;
     &>div>h4{
         padding-top: 1.5em; 
+    }
+    &>form{
+        padding-top: 100px;
     }
 }
 
@@ -127,4 +136,3 @@ body{
   display:inline-block;
   transform: rotate(180deg);
 }
-

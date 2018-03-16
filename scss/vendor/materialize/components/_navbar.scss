@@ -125,7 +125,7 @@ nav {
       font-size: $navbar-font-size;
       color: $navbar-font-color;
       display: block;
-      padding: 0 15px;
+      padding: 0 20px;
       cursor: pointer;
 
       &.btn, &.btn-large, &.btn-flat, &.btn-floating {
@@ -147,9 +147,9 @@ nav {
       //////////////////*/
       ////////////////////////////////////////////////////////////////////////////////////////
       &:hover {
-        background-color: #ffffffbe; 
+        background-color: #ffffff; 
         color: rgb(33, 33, 33);
-        border-bottom: .2em solid #06a0ff;
+        border-bottom: .3em solid #06a0ff;
       }
     }
 
