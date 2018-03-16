@@ -27,7 +27,7 @@
         }
     }
 
-    .blinking-cursor {
+.blinking-cursor {
     font-weight: 90px;
     font-size: 30px;
     color: #2E3D48;
@@ -39,7 +39,7 @@
         color: transparent;
     }
     50% {
-        color: rgb(255, 255, 255);
+        color: #06a0ff;
     }
 }
 
@@ -60,7 +60,7 @@
             &>div>h4{
                 font-size: 28px;
             }
-            &>div>.section__home--me{
+            &>div>.section__about--me{
                 font-size: 20px;
                 margin: 0;
             }
@@ -108,7 +108,7 @@
         color: transparent;
     }
     50% {
-        color: rgb(255, 255, 255);
+        color: #06a0ff;
     }
 }
 
@@ -129,7 +129,7 @@
             &>div>h4{
                 font-size: 28px;
             }
-            &>div>.section__home--me{
+            &>div>.section__about--me{
                 font-size: 20px;
                 margin: 0;
             }
@@ -176,7 +176,7 @@
         color: transparent;
     }
     50% {
-        color: rgb(255, 255, 255);
+        color: #06a0ff;
     }
 }
 
@@ -197,7 +197,7 @@
             &>div>h4{
                 font-size: 28px;
             }
-            &>div>.section__home--me{
+            &>div>.section__about--me{
                 font-size: 20px;
                 margin: 0;
             }
@@ -244,7 +244,7 @@
             color: transparent;
         }
         50% {
-            color: rgb(255, 255, 255);
+            color: #06a0ff;
         }
     }
 
@@ -260,7 +260,7 @@
                 padding-top: 5em;
                 width: 180px;
             }
-            &>div>.section__home--me{
+            &>div>.section__about--me{
                 font-size: 20px;
                 margin: 0 150px;
             }

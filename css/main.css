@@ -3085,7 +3085,7 @@ nav ul a span.badge {
         left: 100%; } }
 
 nav {
-  color: #fff;
+  color: #ffffff;
   background-color: #ee6e73;
   width: 100%;
   height: 56px;
@@ -3099,7 +3099,7 @@ nav {
       position: relative;
       line-height: normal; }
   nav a {
-    color: #fff; }
+    color: #ffffff; }
   nav i,
   nav [class^="mdi-"], nav [class*="mdi-"],
   nav i.material-icons {
@@ -3124,7 +3124,7 @@ nav {
       line-height: 56px; }
   nav .brand-logo {
     position: absolute;
-    color: #fff;
+    color: #ffffff;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0; }
@@ -3165,10 +3165,10 @@ nav {
         background-color: rgba(0, 0, 0, 0.1); }
     nav ul a {
       transition: background-color .3s;
-      font-size: 1rem;
-      color: #fff;
+      font-size: 1.2rem;
+      color: #ffffff;
       display: block;
-      padding: 0 15px;
+      padding: 0 20px;
       cursor: pointer; }
       nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
         margin-top: -2px;
@@ -3178,9 +3178,9 @@ nav {
           height: inherit;
           line-height: inherit; }
       nav ul a:hover {
-        background-color: #ffffffbe;
+        background-color: #ffffff;
         color: #212121;
-        border-bottom: .2em solid #06a0ff; }
+        border-bottom: .3em solid #06a0ff; }
     nav ul.left {
       float: left; }
   nav form {
@@ -3203,7 +3203,7 @@ nav {
         color: rgba(255, 255, 255, 0.7);
         transition: color .3s; }
       nav .input-field label.active i {
-        color: #fff; }
+        color: #ffffff; }
 
 .navbar-fixed {
   position: relative;
@@ -3214,12 +3214,12 @@ nav {
 
 @media only screen and (min-width: 601px) {
   nav.nav-extended .nav-wrapper {
-    min-height: 64px; }
+    min-height: 80px; }
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 64px;
-    line-height: 64px; }
+    height: 80px;
+    line-height: 80px; }
   .navbar-fixed {
-    height: 64px; } }
+    height: 80px; } }
 
 @font-face {
   font-family: "Roboto";
@@ -6915,7 +6915,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /*shape-rendering: crispEdges;*/ }
 
 body {
-  width: 100%; }
+  width: 100%;
+  font-family: 'Open Sans', sans-serif; }
 
 .section__backgroundVideo {
   display: flex;
@@ -6935,21 +6936,23 @@ body {
     background-color: #cfd8dc22;
     position: absolute;
     color: white;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 1px 2px #474646; }
     .section__backgroundVideo--text > h1 {
-      font-size: 80px; }
+      font-size: 80px;
+      font-family: 'Ubuntu', sans-serif; }
 
 .blinking-cursor {
   font-weight: 100px;
   font-size: 40px;
-  color: #2E3D48;
+  color: #06a0ff;
   animation: 1s blink step-end infinite; }
 
 @keyframes blink {
   from, to {
-    color: transparent; }
+    color: #cfd8dc22; }
   50% {
-    color: white; } }
+    color: #06a0ff; } }
 
 .div__about {
   width: 100%;
@@ -6967,7 +6970,7 @@ body {
       text-decoration-color: #06a0ff;
       text-shadow: 1px 0.5px #474646; }
     .div__about .section__about > div > img {
-      padding-top: 100px;
+      padding-top: 40px;
       width: 200px; }
     .div__about .section__about > .div__about--tecnologies > div > h5 {
       padding-top: 50px;
@@ -6993,17 +6996,24 @@ body {
     .div__about .section__about > .div__about--tecnologies > div > .img__tecnologies6 {
       width: 100px;
       margin: 0 10px; }
-    .div__about .section__about > div > .section__home--me {
-      font-size: 22px;
-      margin: 0 250px; }
-      .div__about .section__about > div > .section__home--me > p > strong {
+    .div__about .section__about > div > .section__about--me {
+      font-size: 25px;
+      margin: 0 250px;
+      font-family: 'Open Sans', sans-serif; }
+      .div__about .section__about > div > .section__about--me > p > strong {
         font-size: 25px;
-        color: #2768d9; }
+        color: #06a0ff;
+        text-decoration: underline; }
+
+.section__works {
+  padding-top: 60px; }
 
 .section__contact {
   padding-top: 50px; }
   .section__contact > div > h4 {
     padding-top: 1.5em; }
+  .section__contact > form {
+    padding-top: 100px; }
 
 .img__footer {
   width: 30px;
@@ -7044,7 +7054,7 @@ body {
     from, to {
       color: transparent; }
     50% {
-      color: white; } }
+      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
@@ -7059,7 +7069,7 @@ body {
         font-size: 40px; }
       .div__about .section__about > div > h4 {
         font-size: 28px; }
-      .div__about .section__about > div > .section__home--me {
+      .div__about .section__about > div > .section__about--me {
         font-size: 20px;
         margin: 0; } }
 
@@ -7093,7 +7103,7 @@ body {
     from, to {
       color: transparent; }
     50% {
-      color: white; } }
+      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
@@ -7108,7 +7118,7 @@ body {
         font-size: 40px; }
       .div__about .section__about > div > h4 {
         font-size: 28px; }
-      .div__about .section__about > div > .section__home--me {
+      .div__about .section__about > div > .section__about--me {
         font-size: 20px;
         margin: 0; } }
 
@@ -7142,7 +7152,7 @@ body {
     from, to {
       color: transparent; }
     50% {
-      color: white; } }
+      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
@@ -7157,7 +7167,7 @@ body {
         font-size: 45px; }
       .div__about .section__about > div > h4 {
         font-size: 28px; }
-      .div__about .section__about > div > .section__home--me {
+      .div__about .section__about > div > .section__about--me {
         font-size: 20px;
         margin: 0; } }
 
@@ -7191,7 +7201,7 @@ body {
     from, to {
       color: transparent; }
     50% {
-      color: white; } }
+      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
@@ -7202,6 +7212,6 @@ body {
       .div__about .section__about > div > img {
         padding-top: 5em;
         width: 180px; }
-      .div__about .section__about > div > .section__home--me {
+      .div__about .section__about > div > .section__about--me {
         font-size: 20px;
         margin: 0 150px; } }
