@@ -6937,10 +6937,24 @@ body {
     position: absolute;
     color: white;
     text-align: center;
-    text-shadow: 1px 2px #474646; }
+    text-shadow: 0px .1rem; }
     .section__backgroundVideo--text > h1 {
       font-size: 80px;
       font-family: 'Ubuntu', sans-serif; }
+    .section__backgroundVideo--text > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; }
+      .section__backgroundVideo--text > ul > li {
+        display: inline;
+        padding: 5px; }
+        .section__backgroundVideo--text > ul > li > a > img {
+          width: 30px;
+          padding-bottom: 10px; }
+          .section__backgroundVideo--text > ul > li > a > img:hover {
+            width: 35px;
+            transition: width .2s; }
 
 .blinking-cursor {
   font-weight: 100px;
@@ -6950,7 +6964,7 @@ body {
 
 @keyframes blink {
   from, to {
-    color: #cfd8dc22; }
+    color: transparent; }
   50% {
     color: #06a0ff; } }
 
@@ -6958,7 +6972,7 @@ body {
   width: 100%;
   font-size: 20px; }
   .div__about .section__about {
-    padding-top: 4rem;
+    padding-top: 3rem;
     width: 100%;
     height: 50vh; }
     .div__about .section__about > div > .div__about--tecnologies > div {
@@ -7025,6 +7039,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .section__backgroundVideo {
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -7050,11 +7065,6 @@ body {
     font-size: 30px;
     color: #2E3D48;
     animation: 1s blink step-end infinite; }
-  @keyframes blink {
-    from, to {
-      color: transparent; }
-    50% {
-      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
@@ -7095,20 +7105,15 @@ body {
       .section__backgroundVideo--text > h3 {
         font-size: 40px; }
   .blinking-cursor {
-    font-weight: 90px;
+    font-weight: 80px;
     font-size: 40px;
     color: #2E3D48;
     animation: 1s blink step-end infinite; }
-  @keyframes blink {
-    from, to {
-      color: transparent; }
-    50% {
-      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 3rem;
+      padding-top: 5rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
@@ -7148,16 +7153,11 @@ body {
     font-size: 40px;
     color: #2E3D48;
     animation: 1s blink step-end infinite; }
-  @keyframes blink {
-    from, to {
-      color: transparent; }
-    50% {
-      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 3rem;
+      padding-top: 4rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
@@ -7197,16 +7197,11 @@ body {
     font-size: 45px;
     color: #2E3D48;
     animation: 1s blink step-end infinite; }
-  @keyframes blink {
-    from, to {
-      color: transparent; }
-    50% {
-      color: #06a0ff; } }
   .div__about {
     width: 100%;
     font-size: 18px; }
     .div__about .section__about {
-      padding-top: 1rem;
+      padding-top: 3rem;
       width: 100%;
       height: 50vh; }
       .div__about .section__about > div > img {
