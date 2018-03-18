@@ -6917,7 +6917,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 body {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .section__backgroundVideo {
   display: flex;
@@ -7039,8 +7039,6 @@ body {
   transform: rotate(180deg); }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  body {
-    overflow: hidden; }
   .section__backgroundVideo {
     overflow: hidden;
     display: flex;
