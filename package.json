@@ -19,15 +19,8 @@
   },
   "homepage": "https://github.com/LaggerP/laggerp.github.io#readme",
   "devDependencies": {
-<<<<<<< HEAD
     "node-sass": "^4.8.3",
     "nodemon": "^1.17.2"
-=======
-    "node-sass": "^4.7.2",
-    "nodemon": "^1.17.1"
-  },
-  "dependencies": {
-    "npm": "^5.8.0"
->>>>>>> develop
+
   }
 }
