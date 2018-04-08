@@ -1,0 +1,40 @@
+body{
+    width: 100%;
+    height:100%;
+    overflow-x: hidden;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.header_background{
+    min-width: 100%;
+    background: linear-gradient(rgba(5, 159, 255, 0.5), rgba(6, 160, 255,1.7)), url(../media/img/headerImg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
+    &-text{
+    display: grid;
+    justify-content: center;
+        &>h1{
+            margin: 0 auto;
+            padding-top:2em; 
+            color: rgb(255, 255, 255);
+            font-size: 90px;
+        }
+        &>h2{
+            margin: 0 auto;
+
+            font-size: 45px;
+            color: white;
+        }
+    }
+}
+
+.section_div{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-size: arial;
+}
