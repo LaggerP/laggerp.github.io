@@ -4,31 +4,293 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="HlxEqzeNNZ4XJyYREfAbAbkcWF7U2d0Z7tQ0OLSC7Ng"/>
+    <meta name="description" content="Mi nombre es Pablo Lagger y soy diseñador de páginas web. Hago páginas a medida usando las últimas tecnologias del mercado">
+    <meta name="keywords" content="Pablo Lagger, laggerp, LaggerP, web, programador web, HTML, JS, JAVASCRIPT, CSS, HOSTING, FRONT END, SEO, laggerp web,">
+    <link rel="icon" href="media/img/favicon.ico"/>
     <title>Pablo Lagger</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
+    
     <main>
         <header>
-            <div class="header_background">
-                <div class="header_background-text">
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper black">
+                        <!-- <a href="#!" class="brand-logo">PABLO</a> -->
+                        <a href="#" data-activates="mobile-demo" class="button-collapse">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down wow bounceIn">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">¿Qué hago?</a>
+                            </li>
+                            <li>
+                                <a href="#works">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+                 <ul class="side-nav " id="mobile-demo">
+                    <li>
+                        <a href="#home"><i class="material-icons">home</i>Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"><i class="material-icons">info</i>¿Qué hago?</a>
+                    </li>
+                    <li>
+                        <a href="#works"><i class="material-icons">work</i>Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact"><i class="material-icons">email</i>Contacto</a>
+                    </li>
+                </ul>
+        </header>
+        <section>    
+            <!-- M4V for Apple -->
+            <div class="section__backgroundVideo" id="home">
+                <video class="section__backgroundVideo--video" autoplay loop poster="media/img/posterHeader.jpeg">
+                    <source src="http://res.cloudinary.com/djlprd6ed/video/upload/q_100/v1521072578/Copia_de_backgroundVideo.mp4" type='video/mp4'>
+                    <source src="http://res.cloudinary.com/djlprd6ed/video/upload/q_100/v1521072622/backgroundVideo.webm" type='video/webm'>
+                    <source src="media/video/backgroundVideo.m4v" type="video/mp4"> 
+                    <source src="media/video/backgroundVideo.ogv" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="section__backgroundVideo--text wow bounceInRight">
                     <h1>Pablo Lagger</h1>
-                    <h2>Front End Designer</h2>
+                    <h3>< Diseñador Front End /><span class="blinking-cursor">|</span></h3>
+                    <ul>
+                        <li><a class="" href="https://github.com/LaggerP"><img class="imgHeader" src="media/img/GitHub.png" alt="github profile"></a></li>
+                        <li>
+                            <a class="" href="https://www.linkedin.com/in/pablo-lagger/"><img class="imgHeader" src="media/img/linkedin.png" alt="linkedin profile"></a>
+                        </li>
+                        <li></li>
+                    </ul>  
                 </div>
             </div>
-        </header>
-        <section>
-            <div class="section_div">
-                <h3>Página en construcción</h3>
-                <h4>Si desea comunicarse conmigo, mandeme un mail a:</h4>
-                <a href="mailto:contactolaggerp@gmail.com?Subject=Contacto" target="_top">contactolaggerp@gmail.com</a>
-                <h1></h1>
+            <div class="div__about blue-grey lighten-5">
+                <div class="row center-align">
+                    <div class="section__about" id="about">
+                        <div class="col s12 m12 l12 xl12 ">
+                            <h1>¿Qué hago?</h1>
+                            <h4>Diseñador Front End Jr.</h4>
+                        </div>
+                        <div class="col s12 m12 l12 xl12 align-center">
+                            <div class="section__about--me center-align">
+                               <p>Hola! mi nombre es <strong>Pablo Lagger</strong>, tengo 20 años, soy estudiante de Licenciatura en Gestión de Tecnología de la Información y actualmente me encuentro trabajando como diseñador Front End freelance.</p>
+                               <p>Tengo un alto interés por las tecnologías web Front End, por lo que me encuentro actualizándome constantemente.</p>
+                               <p>Busco dar solución a las necesidades digitales actuales, a través de mis conocimientos sobre programación web.</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l4 xl4 wow bounceInLeft">
+                            <h5 class="center-align">Diseño responsive</h5>
+                            <img src="media/img/responsiveDesing.png" alt="responsive">
+                            <p>Diseño responsive para que su página pueda visualizarse en todos los dispositivos.</p>
+                        </div>
+                        <div class="col s12 m12 l4 xl4 wow bounceInUp">
+                            <h5 class="center-align">Hosting y mail</h5>
+                            <img src="media/img/hostIcon.png" alt="hosting">
+                            <p>Alta y subida a servidores hosting y configuración de correo con soporte 24/7.</p>
+                        </div>
+                        <div class="col s12 m12 l4 xl4 wow bounceInRight">
+                            <h5 class="center-align">SEO</h5>
+                            <img src="media/img/SEOicon.png" alt="hosting">
+                            <p>Posicionamiento web en los buscadores más importantes.   </p>
+                        </div>
+
+                        <div class="div__about--tecnologies row">
+                            <div class="col s12 m12 l12 xl12 wow bounceInUp">
+                                <h5 class="center-align">Algunas de las tecnologías que uso</h5>
+                                <img class="img__tecnologies1" src="media/img/html.png" alt="hosting">
+                                <img class="img__tecnologies2" src="media/img/css.png" alt="hosting">
+                                <img class="img__tecnologies3" src="media/img/js.png" alt="hosting">
+                                <img class="img__tecnologies4" src="media/img/git.png" alt="hosting">
+                                <img class="img__tecnologies5" src="media/img/bootstrap.png" alt="hosting">
+                                <img class="img__tecnologies6" src="media/img/sass.png" alt="hosting">
+                                <p>Conocimiento de HTML5, CSS3, Javascript, Scss, Bootstrap 3, Bootstrap 4, Materialize, Git, GitHub...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="section__works" id="works">
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="card wow slideInLeft">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="media/img/coderhouseIMG.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Proyecto CoderHouse
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Proyecto CoderHouse:
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>El proyecto trataba de realizar una página web ficticia de una banda de música.</p>
+                                <p>Se pedia realizar la misma con las siguientes características:
+                                    <ul class="center-align">
+                                        <li><i class="tiny material-icons">arrow_forward</i>Página mobile first</li>
+                                        <li><i class="tiny material-icons">arrow_forward</i>Página responsive (que se pueda visualizar en mas de 4 pantallas).</li>
+                                        <li><i class="tiny material-icons">arrow_forward</i>Uso de tecnologías enseñadas a gusto.</li>
+                                    </ul>
+                                </p>
+                                <br>
+                                <p><h5 class="center-align">¿Cómo se realizó?</h5>
+                                    <ul class="center-align">
+                                        <li><i class="tiny material-icons">arrow_forward</i>Página realizada con HTML, Scss, Bootstrap, Javascript (JQuery), PHP</li>
+                                    </ul>
+                                </p>
+                                <br>
+                                <h5 class="center-align"><a href="http://coderhouse.com">Página oficial de CoderHouse</a></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="card wow slideInLeft">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="media/img/Trabajo1.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Proyecto Futuro
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                    
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Proyecto Futuro
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, molestiae eaque rerum optio ipsum suscipit at voluptatum placeat, omnis recusandae reprehenderit delectus quaerat esse saepe maxime facere corporis ab ipsa excepturi quis, veniam blanditiis quos officia! Esse possimus odit a cumque illum atque labore, provident ut, accusantium ipsa omnis, ex tenetur corrupti blanditiis! Temporibus corporis est quo id ullam, debitis molestias quas harum veniam explicabo facere similique minima soluta quia perferendis quae reiciendis tempora nisi commodi distinctio ipsum aperiam repellendus culpa deserunt. Ad quasi reiciendis tenetur fugiat, ipsa quaerat. Dolores cumque distinctio culpa. Repellendus saepe quis, eaque tenetur corporis molestias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="card wow slideInLeft">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="media/img/Trabajo1.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Proyecto Futuro
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Proyecto Futuro
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, molestiae eaque rerum optio ipsum suscipit
+                                    at voluptatum placeat, omnis recusandae reprehenderit delectus quaerat esse saepe maxime facere corporis
+                                    ab ipsa excepturi quis, veniam blanditiis quos officia! Esse possimus odit a cumque illum atque labore, provident
+                                    ut, accusantium ipsa omnis, ex tenetur corrupti blanditiis! Temporibus corporis est quo id ullam, debitis
+                                    molestias quas harum veniam explicabo facere similique minima soluta quia perferendis quae reiciendis tempora
+                                    nisi commodi distinctio ipsum aperiam repellendus culpa deserunt. Ad quasi reiciendis tenetur fugiat, ipsa
+                                    quaerat. Dolores cumque distinctio culpa. Repellendus saepe quis, eaque tenetur corporis molestias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section__contact">
+                <div class="row blue-grey lighten-5">
+                    <h4 class="center-align">Contacto</h4>
+                    <div class="section__contact" id="contact">
+                        <form class="col s12  m12 l6 offset-l3 xl6 offset-xl3">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Su nombre" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Nombre</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Su apellido" id="last_name" type="text" class="validate">
+                                    <label for="last_name">Apellido</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Su email" id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="textarea1" class="materialize-textarea" placeholder="Su mensaje"></textarea>
+                                        <label for="textarea1">Mensaje</label>
+                                    </div>
+                                </div>
+
+                            <div class="row right-align">
+                                <a class="btn light-blue base" id="btnSubmit">Enviar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
         </section>
+        <footer class="page-footer grey darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Pablo Lagger</h5>
+                        <p class="grey-text text-lighten-4">Diseñador Front End Jr.</p>
+                        <p>Si desea conocer más de mi, haga click en los "Links de interes"</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links de interés</h5>
+                        <ul>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="https://github.com/LaggerP"><img class="img__footer" src="media/img/GitHub.png" alt="github profile"> Perfil Github</a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/pablo-lagger/"><img class="img__footer" src="media/img/linkedin.png" alt="linkedin profile"> Perfil Linkedin</a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!"><img class="img__footer" src="media/img/CV.png" alt=""> Descargar CV</a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="https://www.coderhouse.com/@pablolagger"><img class="img__footer" src="media/img/coderhouse.png" alt="coderhouse" srcset=""> Perfil CoderHouse</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright center-align">
+                <div class="container">
+                    <span class="copyleft">&copy;</span> 2018 Lagger Pablo | Todas las imagenes utilizadas en este sitio web pertenecen a sus respectivos dueños
+                </div>
+            </div>
+        </footer>
+
+
     </main>
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bin/materialize.js"></script>
+    <script src="js/ownJs/typed.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>    
+    <script type="text/javascript"> 
+        $(".button-collapse").sideNav();
+    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,2 +1,4 @@
-@import 'ownStyles/estilos';
-@import 'ownStyles/_media';
+@import 'vendor/materialize/materialize';
+@import '__config';
+@import '_ownStyles/__configIndex';
+@import '_media/__media';
