@@ -29,6 +29,11 @@ body{
             font-size: 45px;
             color: white;
         }
+        &>a{
+            text-decoration: none;
+            text-align: center;
+            
+        }
     }
 }
 
@@ -37,4 +42,8 @@ body{
     justify-content: center;
     text-align: center;
     font-size: arial;
+    font-size: 30px;
+    &>a{
+        text-decoration: none;
+    }
 }
