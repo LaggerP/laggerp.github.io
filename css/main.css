@@ -25,9 +25,15 @@ body {
       margin: 0 auto;
       font-size: 45px;
       color: white; }
+    .header_background-text > a {
+      text-decoration: none;
+      text-align: center; }
 
 .section_div {
   display: grid;
   justify-content: center;
   text-align: center;
-  font-size: arial; }
+  font-size: arial;
+  font-size: 30px; }
+  .section_div > a {
+    text-decoration: none; }
