@@ -15,7 +15,6 @@ body{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     &-text{
-    display: grid;
     justify-content: center;
         &>h1{
             margin: 0 auto;
@@ -43,7 +42,74 @@ body{
     text-align: center;
     font-size: arial;
     font-size: 30px;
+    &--me{
+        padding: 50px;
+        margin: 20px 60px;
+        &>h3{
+            font-size: 70px;
+        }
+        &-whatIdo{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            &>h3{
+                font-size: 70px;
+            }
+            &>.item{
+                padding-top: 20px; 
+                width:320px;
+                height: 500px;
+                align-items: center;
+                &>img{
+                    width: 200px;
+                }
+                &>.hostClass{
+                    padding-left: 31px;
+                }
+            }
+
+        }
+        &-technologies{
+            &>h3{
+                font-size: 70px;
+            }
+            &>.img1{
+                width: 100px;
+            }
+            &>.img2{
+                width: 93px;
+            }
+            &>.img3{
+                width: 100px;
+
+            }
+            &>.img4{
+                width: 90px;
+            }
+            &>.img5{
+                width: 85px;
+                padding-left: 15px;
+            }
+            &>.img6{
+                width: 100px;
+            }            
+
+        }
+
+    }
     &>a{
         text-decoration: none;
     }
 }
+
+        // &-whatIdo{
+        //     &>h3{
+        //         // padding-top: 50px;
+        //         // font-size: 70px;
+        //     }
+        //     &>img{
+        //         padding-top: 50px;
+        //         // margin: 0 70px;
+        //     }
+
+        // }

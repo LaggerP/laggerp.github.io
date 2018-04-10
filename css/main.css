@@ -14,7 +14,6 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%); }
   .header_background-text {
-    display: grid;
     justify-content: center; }
     .header_background-text > h1 {
       margin: 0 auto;
@@ -35,6 +34,41 @@ body {
   text-align: center;
   font-size: arial;
   font-size: 30px; }
+  .section_div--me {
+    padding: 50px;
+    margin: 20px 60px; }
+    .section_div--me > h3 {
+      font-size: 70px; }
+    .section_div--me-whatIdo {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      .section_div--me-whatIdo > h3 {
+        font-size: 70px; }
+      .section_div--me-whatIdo > .item {
+        padding-top: 20px;
+        width: 320px;
+        height: 500px;
+        align-items: center; }
+        .section_div--me-whatIdo > .item > img {
+          width: 200px; }
+        .section_div--me-whatIdo > .item > .hostClass {
+          padding-left: 31px; }
+    .section_div--me-technologies > h3 {
+      font-size: 70px; }
+    .section_div--me-technologies > .img1 {
+      width: 100px; }
+    .section_div--me-technologies > .img2 {
+      width: 93px; }
+    .section_div--me-technologies > .img3 {
+      width: 100px; }
+    .section_div--me-technologies > .img4 {
+      width: 90px; }
+    .section_div--me-technologies > .img5 {
+      width: 85px;
+      padding-left: 15px; }
+    .section_div--me-technologies > .img6 {
+      width: 100px; }
   .section_div > a {
     text-decoration: none; }
 
