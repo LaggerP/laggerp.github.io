@@ -4,6 +4,22 @@ body {
   overflow-x: hidden;
   font-family: 'Tajawal', sans-serif; }
 
+.header_navbar {
+  z-index: 1000; }
+  .header_navbar > ul {
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .header_navbar > ul > li {
+      display: inline; }
+      .header_navbar > ul > li > a {
+        display: inline-block;
+        padding: 10px; }
+      .header_navbar > ul > li > a:hover {
+        text-decoration: none; }
+
 .header_background {
   min-width: 100%;
   background: linear-gradient(rgba(5, 159, 255, 0.5), #06a0ff), url(../media/img/headerImg1.jpeg);
@@ -24,9 +40,17 @@ body {
       margin: 0 auto;
       font-size: 45px;
       color: white; }
-    .header_background-text > a {
-      text-decoration: none;
+    .header_background-text > ul {
+      margin: 0 auto;
+      list-style: none;
       text-align: center; }
+      .header_background-text > ul > li {
+        display: inline; }
+        .header_background-text > ul > li > a {
+          display: inline-block;
+          padding: 10px; }
+        .header_background-text > ul > li > a:hover {
+          text-decoration: none; }
 
 .section_div {
   display: grid;
@@ -40,16 +64,18 @@ body {
     .section_div--me > h3 {
       font-size: 70px; }
     .section_div--me-whatIdo {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around; }
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: 'item';
+      grid-template-columns: repeat 3, 1fr; }
       .section_div--me-whatIdo > h3 {
         font-size: 70px; }
       .section_div--me-whatIdo > .item {
         padding-top: 20px;
         width: 320px;
         height: 500px;
-        align-items: center; }
+        align-items: center;
+        grid-area: item; }
         .section_div--me-whatIdo > .item > img {
           width: 200px; }
         .section_div--me-whatIdo > .item > .hostClass {
@@ -69,8 +95,6 @@ body {
       padding-left: 15px; }
     .section_div--me-technologies > .img6 {
       width: 100px; }
-  .section_div > a {
-    text-decoration: none; }
 
 @media screen and (min-width: 320px) {
   .header_background-text {

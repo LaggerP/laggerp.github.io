@@ -5,6 +5,30 @@ body{
     font-family: 'Tajawal', sans-serif;
 }
 
+
+.header_navbar{
+    z-index: 1000;
+    &>ul{
+        border-width:1px 0;
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+        &>li{
+            display:inline;
+            &>a{
+                display:inline-block;
+                padding:10px;
+            }
+            &>a:hover{
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+
 .header_background{
     min-width: 100%;
     background: linear-gradient(rgba(5, 159, 255, 0.5), rgba(6, 160, 255,1.7)), url(../media/img/headerImg1.jpeg);
@@ -15,7 +39,7 @@ body{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     &-text{
-    justify-content: center;
+        justify-content: center;
         &>h1{
             margin: 0 auto;
             padding-top:2em; 
@@ -24,16 +48,25 @@ body{
         }
         &>h2{
             margin: 0 auto;
-
             font-size: 45px;
             color: white;
         }
-        &>a{
-            text-decoration: none;
-            text-align: center;
-            
+        &>ul{
+            margin: 0 auto;
+            list-style:none;
+            text-align:center;
+            &>li{
+                display:inline;
+                &>a{
+                    display:inline-block;
+                    padding:10px;
+                }
+                &>a:hover{
+                    text-decoration: none;
+                }
+            }
         }
-    }
+    }   
 }
 
 .section_div{
@@ -49,9 +82,12 @@ body{
             font-size: 70px;
         }
         &-whatIdo{
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: 
+                'item'
+            ;
+            grid-template-columns: repeat (3,1fr);
             &>h3{
                 font-size: 70px;
             }
@@ -60,6 +96,7 @@ body{
                 width:320px;
                 height: 500px;
                 align-items: center;
+                grid-area: item;
                 &>img{
                     width: 200px;
                 }
@@ -67,7 +104,6 @@ body{
                     padding-left: 31px;
                 }
             }
-
         }
         &-technologies{
             &>h3{
@@ -97,19 +133,6 @@ body{
         }
 
     }
-    &>a{
-        text-decoration: none;
-    }
 }
 
-        // &-whatIdo{
-        //     &>h3{
-        //         // padding-top: 50px;
-        //         // font-size: 70px;
-        //     }
-        //     &>img{
-        //         padding-top: 50px;
-        //         // margin: 0 70px;
-        //     }
 
-        // }
