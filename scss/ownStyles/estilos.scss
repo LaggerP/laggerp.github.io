@@ -5,41 +5,18 @@ body{
     font-family: 'Tajawal', sans-serif;
 }
 
-
-.header_navbar{
-    z-index: 1000;
-    &>ul{
-        border-width:1px 0;
-        list-style:none;
-        margin:0;
-        padding:0;
-        text-align:center;
-        &>li{
-            display:inline;
-            &>a{
-                display:inline-block;
-                padding:10px;
-            }
-            &>a:hover{
-                text-decoration: none;
-            }
-        }
-
-    }
-}
-
-
 .header_background{
     min-width: 100%;
     background: linear-gradient(rgba(5, 159, 255, 0.5), rgba(6, 160, 255,1.7)), url(../media/img/headerImg1.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 900px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     &-text{
         justify-content: center;
+        text-align: center;
         &>h1{
             margin: 0 auto;
             padding-top:2em; 
@@ -51,88 +28,99 @@ body{
             font-size: 45px;
             color: white;
         }
-        &>ul{
-            margin: 0 auto;
-            list-style:none;
-            text-align:center;
-            &>li{
-                display:inline;
-                &>a{
-                    display:inline-block;
-                    padding:10px;
-                }
-                &>a:hover{
-                    text-decoration: none;
-                }
+        &>a{
+            padding: 0 10px;
+            &>img{
+                padding-top: 20px;
             }
         }
     }   
 }
 
 .section_div{
-    display: grid;
-    justify-content: center;
     text-align: center;
-    font-size: arial;
-    font-size: 30px;
+    list-style: none;
     &--me{
+        margin: 20px auto;
         padding: 50px;
-        margin: 20px 60px;
         &>h3{
-            font-size: 70px;
+            font-size: 60px;
+            padding-bottom: 30px; 
         }
-        &-whatIdo{
+        &>p{
+            font-size: 25px;
+            padding-bottom: 90px;
+        }
+    }
+    &--whatIdo{  
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        align-content: center;
+        &>.item1{
+            font-size: 20px; 
+        }
+        &>.item2{
+            font-size: 20px;    
+            &>img{
+                padding-left: 60px;
+            }             
+        }
+        &>.item3{
+            font-size: 20px;                        
+        }               
+    }
+    &--technologies{
+        padding-top: 100px;
+        &>h3{
+            font-size: 60px;
+            padding-bottom: 1em;
+        }
+        &-imgs{
             display: grid;
-            grid-gap: 20px;
-            grid-template-areas: 
-                'item'
-            ;
-            grid-template-columns: repeat (3,1fr);
-            &>h3{
-                font-size: 70px;
-            }
-            &>.item{
-                padding-top: 20px; 
-                width:320px;
-                height: 500px;
-                align-items: center;
-                grid-area: item;
-                &>img{
-                    width: 200px;
+            width: 100%;
+            grid-gap: 10px;
+            grid-template-columns: repeat(6,1fr);
+            justify-items: center;
+            &>div{
+                &>.img1{
+                    width: 80px;
                 }
-                &>.hostClass{
-                    padding-left: 31px;
+                &>.img2{
+                    width: 75px;
+                }
+                &>.img3{
+                    width: 70px;
+                }
+                &>.img4{
+                    width: 80px;
+                }
+                &>.img5{
+                    width: 75px;
+                }
+                &>.img6{
+                    width: 90px;
                 }
             }
         }
-        &-technologies{
-            &>h3{
-                font-size: 70px;
-            }
-            &>.img1{
-                width: 100px;
-            }
-            &>.img2{
-                width: 93px;
-            }
-            &>.img3{
-                width: 100px;
-
-            }
-            &>.img4{
-                width: 90px;
-            }
-            &>.img5{
-                width: 85px;
-                padding-left: 15px;
-            }
-            &>.img6{
-                width: 100px;
-            }            
-
+        &>p{
+            font-size: 30px;
+            padding-top: 20px;
+            padding: 50px;
         }
-
+    }
+    &--portfolio{
+        display: grid;
+        width: 100%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        align-content: center;      
     }
 }
+
+
 
 

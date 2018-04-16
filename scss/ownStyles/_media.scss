@@ -1,34 +1,87 @@
-@media screen and (min-width: 320px){
+@media screen and (min-width: 320px) and (max-width:480px){
     .header_background{
+        height: 510px;
         &-text{
-        display: grid;
-        justify-content: center;
             &>h1{
-                margin: 0 auto;
-                padding-top:2.7em; 
-                color: rgb(255, 255, 255);
+                padding-top:1.5em; 
                 font-size: 70px;
-                text-align: center;
             }
             &>h2{
-                margin: 0 auto;
-                font-size: 40px;
-                color: white;
+                font-size: 35px;
             }
-            &>a{
-                text-decoration: none;
-                text-align: center;
-            }
-        }
+        }   
     }
-
 
     .section_div{
-        h3,h4{
-            margin: 1rem auto;
+        &--me{
+            margin: 20px auto;
+            padding: 30px;
+            &>h3{
+                font-size: 40px;
+                padding-bottom: 30px; 
+            }
+            &>p{
+                font-size: 18px;
+                padding-bottom: 30px;
+            }
         }
-        a{
-            padding-bottom: 20px;
+        &--whatIdo{  
+            width: 100%;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr;
+            &>.item1{
+                &>img{
+                    padding-bottom: 10px;
+                    width: 160px;
+                }
+                font-size: 18px;
+                padding: 0 5px; 
+            }
+            &>.item2{             
+                font-size: 18px;
+                padding: 0 5px;    
+                &>img{
+                    padding-bottom: 10px;
+                    width: 210px;
+                    padding-left: 30px;
+                }             
+            }
+            &>.item3{
+                &>img{
+                    padding-bottom: 10px;
+                    width: 160px;
+                }        
+                font-size: 18px;
+                padding: 0 5px;                        
+            }               
+        }
+        &--technologies{
+            padding-top: 30px;
+            &>h3{
+                font-size: 38px;
+                padding-bottom: 1em;
+            }
+            &-imgs{
+                display: grid;
+                width: 100%;
+                grid-gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }
+            &>p{
+                font-size: 18px;
+                padding: 30px;
+            }
+        }
+        &--portfolio{
+            display: grid;
+            width: 100%;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            align-content: center;      
         }
     }
+
 }
