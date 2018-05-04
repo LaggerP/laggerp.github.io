@@ -10,12 +10,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 900px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%); }
   .header_background-text {
-    display: grid;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
     .header_background-text > h1 {
       margin: 0 auto;
       padding-top: 2em;
@@ -26,36 +26,257 @@ body {
       font-size: 45px;
       color: white; }
     .header_background-text > a {
-      text-decoration: none;
-      text-align: center; }
+      padding: 0 10px; }
+      .header_background-text > a > img {
+        padding-top: 20px; }
 
 .section_div {
-  display: grid;
-  justify-content: center;
   text-align: center;
-  font-size: arial;
-  font-size: 30px; }
-  .section_div > a {
-    text-decoration: none; }
-
-@media screen and (min-width: 320px) {
-  .header_background-text {
+  list-style: none; }
+  .section_div--me {
+    margin: 20px auto;
+    padding: 50px; }
+    .section_div--me > h3 {
+      font-size: 60px;
+      padding-bottom: 30px; }
+    .section_div--me > p {
+      font-size: 25px;
+      padding-bottom: 90px; }
+  .section_div--whatIdo {
+    width: 100%;
     display: grid;
-    justify-content: center; }
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center; }
+    .section_div--whatIdo > .item1 {
+      font-size: 20px; }
+    .section_div--whatIdo > .item2 {
+      font-size: 20px; }
+      .section_div--whatIdo > .item2 > img {
+        padding-left: 60px; }
+    .section_div--whatIdo > .item3 {
+      font-size: 20px; }
+  .section_div--technologies {
+    padding-top: 100px; }
+    .section_div--technologies > h3 {
+      font-size: 60px;
+      padding-bottom: 1em; }
+    .section_div--technologies-imgs {
+      display: grid;
+      width: 100%;
+      grid-gap: 10px;
+      grid-template-columns: repeat(6, 1fr);
+      justify-items: center; }
+      .section_div--technologies-imgs > div > .img1 {
+        width: 80px; }
+      .section_div--technologies-imgs > div > .img2 {
+        width: 75px; }
+      .section_div--technologies-imgs > div > .img3 {
+        width: 70px; }
+      .section_div--technologies-imgs > div > .img4 {
+        width: 80px; }
+      .section_div--technologies-imgs > div > .img5 {
+        width: 75px; }
+      .section_div--technologies-imgs > div > .img6 {
+        width: 90px; }
+    .section_div--technologies > p {
+      font-size: 30px;
+      padding-top: 20px;
+      padding: 50px; }
+  .section_div--portfolio {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header_background {
+    height: 510px; }
     .header_background-text > h1 {
-      margin: 0 auto;
-      padding-top: 2.7em;
-      color: white;
-      font-size: 70px;
-      text-align: center; }
+      padding-top: 1.5em;
+      font-size: 70px; }
     .header_background-text > h2 {
-      margin: 0 auto;
+      font-size: 35px; }
+  .section_div--me {
+    margin: 20px auto;
+    padding: 30px; }
+    .section_div--me > h3 {
       font-size: 40px;
-      color: white; }
-    .header_background-text > a {
-      text-decoration: none;
-      text-align: center; }
-  .section_div h3, .section_div h4 {
-    margin: 1rem auto; }
-  .section_div a {
-    padding-bottom: 20px; } }
+      padding-bottom: 30px; }
+    .section_div--me > p {
+      font-size: 18px;
+      padding-bottom: 30px; }
+  .section_div--whatIdo {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr; }
+    .section_div--whatIdo > .item1 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item1 > img {
+        padding-bottom: 10px;
+        width: 160px; }
+    .section_div--whatIdo > .item2 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item2 > img {
+        padding-bottom: 10px;
+        width: 210px;
+        padding-left: 30px; }
+    .section_div--whatIdo > .item3 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item3 > img {
+        padding-bottom: 10px;
+        width: 160px; }
+  .section_div--technologies {
+    padding-top: 30px; }
+    .section_div--technologies > h3 {
+      font-size: 38px;
+      padding-bottom: 1em; }
+    .section_div--technologies-imgs {
+      display: grid;
+      width: 100%;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center; }
+    .section_div--technologies > p {
+      font-size: 18px;
+      padding: 30px; }
+  .section_div--portfolio {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center; } }
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .header_background {
+    height: 510px; }
+    .header_background-text > h1 {
+      padding-top: 1.5em;
+      font-size: 70px; }
+    .header_background-text > h2 {
+      font-size: 35px; }
+  .section_div--me {
+    margin: 20px auto;
+    padding: 30px; }
+    .section_div--me > h3 {
+      font-size: 40px;
+      padding-bottom: 30px; }
+    .section_div--me > p {
+      font-size: 18px;
+      padding-bottom: 30px; }
+  .section_div--whatIdo {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr; }
+    .section_div--whatIdo > .item1 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item1 > img {
+        padding-bottom: 10px;
+        width: 200px; }
+    .section_div--whatIdo > .item2 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item2 > img {
+        padding-bottom: 10px;
+        width: 280px;
+        padding-left: 30px; }
+    .section_div--whatIdo > .item3 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item3 > img {
+        padding-bottom: 10px;
+        width: 200px; }
+  .section_div--technologies {
+    padding-top: 30px; }
+    .section_div--technologies > h3 {
+      font-size: 38px;
+      padding-bottom: 1em; }
+    .section_div--technologies-imgs {
+      display: grid;
+      width: 100%;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center; }
+    .section_div--technologies > p {
+      font-size: 18px;
+      padding: 30px; }
+  .section_div--portfolio {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center; } }
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .header_background {
+    height: 510px; }
+    .header_background-text > h1 {
+      padding-top: 1.5em;
+      font-size: 70px; }
+    .header_background-text > h2 {
+      font-size: 35px; }
+  .section_div--me {
+    margin: 20px auto;
+    padding: 30px; }
+    .section_div--me > h3 {
+      font-size: 40px;
+      padding-bottom: 30px; }
+    .section_div--me > p {
+      font-size: 18px;
+      padding-bottom: 30px; }
+  .section_div--whatIdo {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr; }
+    .section_div--whatIdo > .item1 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item1 > img {
+        padding-bottom: 10px;
+        width: 200px; }
+    .section_div--whatIdo > .item2 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item2 > img {
+        padding-bottom: 10px;
+        width: 280px;
+        padding-left: 30px; }
+    .section_div--whatIdo > .item3 {
+      font-size: 18px;
+      padding: 0 5px; }
+      .section_div--whatIdo > .item3 > img {
+        padding-bottom: 10px;
+        width: 200px; }
+  .section_div--technologies {
+    padding-top: 30px; }
+    .section_div--technologies > h3 {
+      font-size: 38px;
+      padding-bottom: 1em; }
+    .section_div--technologies-imgs {
+      display: grid;
+      width: 100%;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center; }
+    .section_div--technologies > p {
+      font-size: 18px;
+      padding: 30px; }
+  .section_div--portfolio {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center; } }
