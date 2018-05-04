@@ -11,12 +11,12 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 900px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 94%);
     &-text{
-    display: grid;
-    justify-content: center;
+        justify-content: center;
+        text-align: center;
         &>h1{
             margin: 0 auto;
             padding-top:2em; 
@@ -25,25 +25,102 @@ body{
         }
         &>h2{
             margin: 0 auto;
-
             font-size: 45px;
             color: white;
         }
         &>a{
-            text-decoration: none;
-            text-align: center;
-            
+            padding: 0 10px;
+            &>img{
+                padding-top: 20px;
+            }
         }
-    }
+    }   
 }
 
 .section_div{
-    display: grid;
-    justify-content: center;
     text-align: center;
-    font-size: arial;
-    font-size: 30px;
-    &>a{
-        text-decoration: none;
+    list-style: none;
+    &--me{
+        margin: 20px auto;
+        padding: 50px;
+        &>h3{
+            font-size: 60px;
+            padding-bottom: 30px; 
+        }
+        &>p{
+            font-size: 25px;
+            padding-bottom: 90px;
+        }
+    }
+    &--whatIdo{  
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        align-content: center;
+        &>.item1{
+            font-size: 20px; 
+        }
+        &>.item2{
+            font-size: 20px;    
+            &>img{
+                padding-left: 60px;
+            }             
+        }
+        &>.item3{
+            font-size: 20px;                        
+        }               
+    }
+    &--technologies{
+        padding-top: 100px;
+        &>h3{
+            font-size: 60px;
+            padding-bottom: 1em;
+        }
+        &-imgs{
+            display: grid;
+            width: 100%;
+            grid-gap: 10px;
+            grid-template-columns: repeat(6,1fr);
+            justify-items: center;
+            &>div{
+                &>.img1{
+                    width: 80px;
+                }
+                &>.img2{
+                    width: 75px;
+                }
+                &>.img3{
+                    width: 70px;
+                }
+                &>.img4{
+                    width: 80px;
+                }
+                &>.img5{
+                    width: 75px;
+                }
+                &>.img6{
+                    width: 90px;
+                }
+            }
+        }
+        &>p{
+            font-size: 30px;
+            padding-top: 20px;
+            padding: 50px;
+        }
+    }
+    &--portfolio{
+        display: grid;
+        width: 100%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        align-content: center;      
     }
 }
+
+
+
+
