@@ -6,7 +6,7 @@ body {
 
 .header_background {
   min-width: 100%;
-  background: linear-gradient(rgba(5, 159, 255, 0.5), #06a0ff), url(../media/img/headerImg1.jpeg);
+  background: linear-gradient(rgba(227, 150, 18, 0.681), #ffbf00), url(../media/img/headerImg1.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,10 +51,11 @@ body {
     align-content: center; }
     .section_div--whatIdo > .item1 {
       font-size: 20px; }
+      .section_div--whatIdo > .item1 > img {
+        padding-left: 20px; }
     .section_div--whatIdo > .item2 {
-      font-size: 20px; }
-      .section_div--whatIdo > .item2 > img {
-        padding-left: 60px; }
+      font-size: 20px;
+      padding-top: 20px; }
     .section_div--whatIdo > .item3 {
       font-size: 20px; }
   .section_div--technologies {
@@ -66,20 +67,27 @@ body {
       display: grid;
       width: 100%;
       grid-gap: 10px;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(7, 1fr);
       justify-items: center; }
       .section_div--technologies-imgs > div > .img1 {
-        width: 80px; }
+        padding-top: 15px;
+        width: 70px; }
       .section_div--technologies-imgs > div > .img2 {
-        width: 75px; }
+        width: 103px; }
       .section_div--technologies-imgs > div > .img3 {
+        padding-top: 18px;
         width: 70px; }
       .section_div--technologies-imgs > div > .img4 {
-        width: 80px; }
+        width: 100px; }
       .section_div--technologies-imgs > div > .img5 {
-        width: 75px; }
-      .section_div--technologies-imgs > div > .img6 {
+        padding-top: 10px;
         width: 90px; }
+      .section_div--technologies-imgs > div > .img6 {
+        padding-bottom: 15px;
+        width: 120px; }
+      .section_div--technologies-imgs > div > .img7 {
+        padding-top: 40px;
+        width: 120px; }
     .section_div--technologies > p {
       font-size: 30px;
       padding-top: 20px;
@@ -95,6 +103,11 @@ body {
 footer .footerDiv {
   align-content: center;
   align-items: center; }
+
+.animation-social {
+  transition: all .2s ease-in-out; }
+  .animation-social:hover {
+    transform: scale(1.1); }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .header_background {
@@ -123,20 +136,20 @@ footer .footerDiv {
       padding: 0 5px; }
       .section_div--whatIdo > .item1 > img {
         padding-bottom: 10px;
-        width: 160px; }
+        width: 180px; }
     .section_div--whatIdo > .item2 {
       font-size: 18px;
       padding: 0 5px; }
       .section_div--whatIdo > .item2 > img {
         padding-bottom: 10px;
-        width: 210px;
+        width: 230px;
         padding-left: 30px; }
     .section_div--whatIdo > .item3 {
       font-size: 18px;
       padding: 0 5px; }
       .section_div--whatIdo > .item3 > img {
         padding-bottom: 10px;
-        width: 160px; }
+        width: 180px; }
   .section_div--technologies {
     padding-top: 30px; }
     .section_div--technologies > h3 {
@@ -148,6 +161,9 @@ footer .footerDiv {
       grid-gap: 20px;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center; }
+      .section_div--technologies-imgs > div > .img6 {
+        padding-top: 15px;
+        width: 110px; }
     .section_div--technologies > p {
       font-size: 18px;
       padding: 30px; }
@@ -274,13 +290,13 @@ footer .footerDiv {
       grid-gap: 20px;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center; }
-    .section_div--technologies > p {
-      font-size: 18px;
-      padding: 30px; }
-  .section_div--portfolio {
-    display: grid;
-    width: 100%;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    align-content: center; } }
+      .section_div--technologies-imgs > p {
+        font-size: 18px;
+        padding: 30px; }
+    .section_div--technologies--portfolio {
+      display: grid;
+      width: 100%;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      align-content: center; } }

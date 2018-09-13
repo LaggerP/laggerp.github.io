@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pablo Lagger</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="media/img/favicon.ico"/>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 <body>
     <main>
@@ -19,9 +22,13 @@
             <div class="header_background">
                 <div class="header_background-text">
                     <h1>Pablo Lagger</h1>
-                    <h2>Front End Designer</h2>
-                    <a href="https://github.com/LaggerP" target="_blank"><img src="media/img/GitHub.png" alt="" srcset=""></a>
-                    <a href="https://www.linkedin.com/in/pablo-lagger/" target="_blank"><img src="media/img/linkedin.png" alt="" srcset=""></a>
+                    <h2>Front End</h2>
+                    <a href="https://github.com/LaggerP" target="_blank">
+                        <img src="media/img/GitHub.png" alt="" srcset="" class="animation-social">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pablo-lagger/" target="_blank">
+                        <img src="media/img/linkedin.png" alt="" srcset="" class="animation-social">
+                    </a>
                 </div>
             </div>
         </header>
@@ -29,34 +36,36 @@
             <div class="section_div">
                 <div class="section_div--me">
                     <h3>¿Quién soy?</h3>
-                    <p>Mi nombre es <strong>Pablo Lagger</strong>, tengo 20 años, soy estudiante de Licenciatura en Gestión de Tecnología de la Información y actualmente me encuentro trabajando como programador Front End de manera freelance.</p>
+                    <p>Mi nombre es <strong>Pablo Lagger</strong>, tengo 21 años, soy estudiante de Licenciatura en Gestión de Tecnología de la Información y actualmente me encuentro trabajando como programador web de manera freelance.</p>
                     <h3>¿Qué hago?</h3>
                 </div>
+                
                 <div class="section_div--whatIdo">
-                        <div class="item1">
-                            <img src="media/img/responsiveDesing.png" alt="">
-                            <p>Diseño responsive para que su página pueda visualizarse en todos los dispositivos.</p>
-                        </div>
-                        <div class="item2">
-                            <img src="media/img/hostIcon.png" alt="" class="hostClass">
-                            <p>Alta y subida a servidores hosting y configuración de correo con soporte 24/7.</p>
-                        </div>
-                        <div class="item3">
-                            <img src="media/img/SEOicon.png" alt="">
-                            <p>Posicionamiento web en los buscadores más importantes. (Google, Bing)</p>
-                        </div>
+                    <div class="item1">
+                        <img src="media/img/responsive.png" alt="" class="wow bounceInLeft">
+                        <p>Diseño responsive para que su página pueda visualizarse en todas las pantallas y dispositivos.</p>
+                    </div>
+                    <div class="item2">
+                        <img src="media/img/hostlogo.png" alt="" class="hostClass wow fadeIn">                            
+                        <p>Alta y subida a servidores hosting y configuración.</p>
+                    </div>
+                    <div class="item3">
+                        <img src="media/img/seo-logo.png" alt="" class="wow bounceInRight">
+                        <p>Posicionamiento web en los buscadores más importantes.</p>
+                    </div>
                 </div>
                 <div class="section_div--technologies">
                         <h3>¿Qué tecnologías uso?</h3>
                         <div class="section_div--technologies-imgs">
-                            <div><img src="media/img/html.png" alt="" class="img1"></div>
-                            <div><img src="media/img/css.png" alt="" class="img2"></div>
-                            <div><img src="media/img/js.png" alt="" class="img3"></div>
+                            <div><img src="media/img/html5.png" alt="" class="img1"></div>
+                            <div><img src="media/img/css3.png" alt="" class="img2"></div>
+                            <div><img src="media/img/javascript-logo.png" alt="" class="img3"></div>
+                            <div><img src="media/img/jquery-logo.png" alt="" class="img7"></div>
                             <div><img src="media/img/sass.png" alt="" class="img4"></div>
-                            <div><img src="media/img/git.png" alt="" class="img5"></div>
-                            <div><img src="media/img/bootstrap.png" alt="" class="img6"></div>
+                            <div><img src="media/img/github-logo.png" alt="" class="img5"></div>
+                            <div><img src="media/img/bootstrap-logo.png" alt="" class="img6"></div>
                         </div>
-                        <p>Tengo conocimiento de HTML5, CSS3, Javascript, Scss, Bootstrap 3, Bootstrap 4, Materialize, Git, GitHub...</p>
+                        <p>Tengo conocimiento de HTML5, CSS3, Javascript, Jquery, Scss, Bootstrap, Git.</p>
                 </div>
                 <div class="section_div--portfolio">
                     <div class="row">
@@ -75,7 +84,7 @@
         </section>
         <!--Footer start-->
         <footer>
-            <div class="footerDiv">
+            <div class="footerDiv text-center">
                 <h4>Comunicate conmigo:</h4>
                 <a href="mailto:contactolaggerp@gmail.com?Subject=Contacto" target="_top">contactolaggerp@gmail.com</a>
             </div>
@@ -83,11 +92,8 @@
         <!--Footer end-->
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

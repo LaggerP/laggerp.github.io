@@ -7,7 +7,9 @@ body{
 
 .header_background{
     min-width: 100%;
-    background: linear-gradient(rgba(5, 159, 255, 0.5), rgba(6, 160, 255,1.7)), url(../media/img/headerImg1.jpeg);
+    background: linear-gradient(rgba(227, 150, 18, 0.681), rgba(255, 191, 0, 1.7)),
+    url(../media/img/headerImg1.jpeg);
+   // background: linear-gradient(rgba(5, 159, 255, 0.5), rgba(6, 160, 255,1.7)), url(../media/img/headerImg1.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,12 +63,13 @@ body{
         align-content: center;
         &>.item1{
             font-size: 20px; 
+            &>img {
+                padding-left: 20px;
+            }
         }
         &>.item2{
-            font-size: 20px;    
-            &>img{
-                padding-left: 60px;
-            }             
+            font-size: 20px;
+            padding-top: 20px;            
         }
         &>.item3{
             font-size: 20px;                        
@@ -82,26 +85,34 @@ body{
             display: grid;
             width: 100%;
             grid-gap: 10px;
-            grid-template-columns: repeat(6,1fr);
+            grid-template-columns: repeat(7,1fr);
             justify-items: center;
             &>div{
                 &>.img1{
-                    width: 80px;
+                    padding-top: 15px;
+                    width: 70px;
                 }
                 &>.img2{
-                    width: 75px;
+                    width: 103px;
                 }
                 &>.img3{
+                    padding-top: 18px;
                     width: 70px;
                 }
                 &>.img4{
-                    width: 80px;
+                    width: 100px;
                 }
                 &>.img5{
-                    width: 75px;
+                    padding-top: 10px;
+                    width: 90px;
                 }
                 &>.img6{
-                    width: 90px;
+                    padding-bottom: 15px;
+                    width: 120px;
+                }
+                &>.img7 {
+                    padding-top: 40px;
+                    width: 120px;
                 }
             }
         }
@@ -129,4 +140,10 @@ footer{
     }
 }
 
-
+//animaciones
+.animation-social{
+    transition: all .2s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

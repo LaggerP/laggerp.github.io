@@ -33,7 +33,7 @@
             &>.item1{
                 &>img{
                     padding-bottom: 10px;
-                    width: 160px;
+                    width: 180px;
                 }
                 font-size: 18px;
                 padding: 0 5px; 
@@ -43,14 +43,14 @@
                 padding: 0 5px;    
                 &>img{
                     padding-bottom: 10px;
-                    width: 210px;
+                    width: 230px;
                     padding-left: 30px;
                 }             
             }
             &>.item3{
                 &>img{
                     padding-bottom: 10px;
-                    width: 160px;
+                    width: 180px;
                 }        
                 font-size: 18px;
                 padding: 0 5px;                        
@@ -68,6 +68,13 @@
                 grid-gap: 20px;
                 grid-template-columns: repeat(3, 1fr);
                 justify-items: center;
+                &>div {
+                    &>.img6 {
+                        padding-top: 15px;
+                        width: 110px;
+                    }
+                }
+
             }
             &>p{
                 font-size: 18px;
@@ -175,89 +182,104 @@
 }
 
 
-@media screen and (min-width: 721px) and (max-width:1024px){
-        .header_background{
+@media screen and (min-width: 721px) and (max-width:1024px) {
+    .header_background {
         height: 510px;
-        &-text{
-            &>h1{
-                padding-top:1.5em; 
+
+        &-text {
+            &>h1 {
+                padding-top: 1.5em;
                 font-size: 70px;
             }
-            &>h2{
+
+            &>h2 {
                 font-size: 35px;
             }
-        }   
+        }
     }
 
-    .section_div{
-        &--me{
+    .section_div {
+        &--me {
             margin: 20px auto;
             padding: 30px;
-            &>h3{
+
+            &>h3 {
                 font-size: 40px;
-                padding-bottom: 30px; 
+                padding-bottom: 30px;
             }
-            &>p{
+
+            &>p {
                 font-size: 18px;
                 padding-bottom: 30px;
             }
         }
-        &--whatIdo{  
+
+        &--whatIdo {
             width: 100%;
             display: grid;
             grid-gap: 20px;
             grid-template-columns: 1fr;
-            &>.item1{
-                &>img{
+
+            &>.item1 {
+                &>img {
                     padding-bottom: 10px;
                     width: 200px;
                 }
+
                 font-size: 18px;
-                padding: 0 5px; 
+                padding: 0 5px;
             }
-            &>.item2{             
+
+            &>.item2 {
                 font-size: 18px;
-                padding: 0 5px;    
-                &>img{
+                padding: 0 5px;
+
+                &>img {
                     padding-bottom: 10px;
                     width: 280px;
                     padding-left: 30px;
-                }             
+                }
             }
-            &>.item3{
-                &>img{
+
+            &>.item3 {
+                &>img {
                     padding-bottom: 10px;
                     width: 200px;
-                }        
+                }
+
                 font-size: 18px;
-                padding: 0 5px;                        
-            }               
+                padding: 0 5px;
+            }
         }
-        &--technologies{
+
+        &--technologies {
             padding-top: 30px;
-            &>h3{
+
+            &>h3 {
                 font-size: 38px;
                 padding-bottom: 1em;
             }
-            &-imgs{
+
+            &-imgs {
                 display: grid;
                 width: 100%;
                 grid-gap: 20px;
                 grid-template-columns: repeat(3, 1fr);
                 justify-items: center;
+                &>p {
+                    font-size: 18px;
+                    padding: 30px;
+                }
             }
-            &>p{
-                font-size: 18px;
-                padding: 30px;
+
+            &--portfolio {
+                display: grid;
+                width: 100%;
+                grid-gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                align-content: center;
             }
-        }
-        &--portfolio{
-            display: grid;
-            width: 100%;
-            grid-gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
-            align-items: center;
-            align-content: center;      
         }
     }
 }
