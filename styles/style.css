@@ -1,0 +1,116 @@
+body{
+    min-width: 100%;
+    overflow-x: hidden; 
+    background-color: black;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 100px 50px;
+    color:white;
+}
+
+h1 {
+    background: linear-gradient(270deg, #f1f1f1, #87e5f8, #9a80e7, #5fee66);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+    font-size: 5em;
+    display: inline-block;
+    text-decoration: underline;
+    margin: 0 0 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+
+h2{
+    font-size: 1.7em;
+}
+
+span{
+    color: rgb(2, 2, 2);
+    height: 300px;
+    line-height: 2em;
+    background: rgb(164, 223, 228);
+}
+
+ul{
+    padding: 0; 
+    display: inline;
+}
+
+li{
+    padding-right: 10px;
+    text-decoration: none;
+    display: inline;
+    list-style-type: none;
+}
+
+:root {
+    --mainColor: rgb(164, 223, 228);;
+  }
+
+a, a:visited{
+    background:
+       linear-gradient(
+         to bottom, var(--mainColor) 0%,
+         var(--mainColor) 100%
+       );
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 4px 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-size .4s;
+  }
+  
+  a:hover {
+    color:black;
+    background-size: 4px 50px;
+  }
+
+
+
+.containerContact{
+    padding: 20px 0 0 0;
+}
