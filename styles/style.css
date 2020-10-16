@@ -109,6 +109,12 @@ a, a:visited{
     background-size: 4px 50px;
   }
 
+  a-work:hover {
+    color:#0D1151;
+    background-size: 4px 50px;
+    
+  }
+
 
 
 .containerContact{
