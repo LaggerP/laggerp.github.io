@@ -1,5 +1,5 @@
 body{
-    overflow: hidden; 
+    overflow-x: hidden; 
     background-color: #f7f7f7;
     font-family: 'Source Code Pro', monospace;
     height: 100%;
