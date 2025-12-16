@@ -1,0 +1,273 @@
+/* ================================
+   iTerm-style Portfolio
+   Variables defined in variables.css
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: #0d0d0d;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* ================================
+   iTerm Window
+   ================================ */
+.iterm-window {
+    position: fixed;
+    left: 50%;
+    top: calc(50% - 35px);
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 900px;
+    background-color: var(--bg-window);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 1000;
+    /* Animación inicial */
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.2s ease;
+}
+
+.iterm-window.visible {
+    opacity: 1;
+}
+
+/* Estado arrastrando */
+.iterm-window.dragging {
+    cursor: grabbing;
+    box-shadow: var(--shadow-lg);
+    transition: box-shadow 0.2s ease;
+}
+
+/* Estado minimizado - oculta toda la ventana */
+.iterm-window.minimized {
+    opacity: 0;
+    top: 100vh;
+    transform: translate(-50%, 0) scale(0.5);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, top 0.3s ease;
+}
+
+/* Estado maximizado */
+.iterm-window.maximized {
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vh;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.iterm-window.maximized .iterm-titlebar {
+    flex-shrink: 0;
+}
+
+.iterm-window.maximized .tab-content {
+    min-height: auto;
+    max-height: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+/* ================================
+   Title Bar with Tabs
+   ================================ */
+.iterm-titlebar {
+    background-color: var(--bg-titlebar);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: grab;
+    user-select: none;
+}
+
+.iterm-window.dragging .iterm-titlebar {
+    cursor: grabbing;
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.light {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.light:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.light:active {
+    transform: scale(0.95);
+}
+
+.light.red { background-color: var(--traffic-red); }
+.light.yellow { background-color: var(--traffic-yellow); }
+.light.green { background-color: var(--traffic-green); }
+
+.tabs {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+}
+
+.tab {
+    background-color: var(--bg-tab-inactive);
+    border: none;
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-default);
+}
+
+.tab:hover,
+.tab:focus {
+    background-color: #3a3a3a;
+    outline: none;
+}
+
+.tab:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.tab.active {
+    background-color: var(--bg-window);
+    color: var(--text-primary);
+}
+
+.window-title {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* ================================
+   Tab Content
+   ================================ */
+.tab-content {
+    display: none;
+    min-height: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* ================================
+   Scrollbar
+   ================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-window);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+/* Tablets / Small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .iterm-window {
+        max-width: 850px;
+    }
+}
+
+/* Large desktops (1440px+) */
+@media (min-width: 1440px) {
+    .iterm-window {
+        max-width: 1000px;
+    }
+}
+
+/* Landscape with short height */
+@media (orientation: landscape) and (max-height: 768px) {
+    .tab-content {
+        max-height: 60vh;
+    }
+}
+
+/* Mobile: Fullscreen sin decoraciones */
+@media (max-width: 768px) {
+    .iterm-window {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .iterm-titlebar {
+        display: none;
+    }
+
+    .tab-content {
+        max-height: none;
+        height: 100%;
+        background-color: rgba(30, 30, 30, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .tab-content.active {
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+/* ================================
+   Accessibility
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+    .tab {
+        transition: none;
+    }
+}

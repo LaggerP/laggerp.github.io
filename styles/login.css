@@ -1,0 +1,283 @@
+/* ================================
+   macOS Sequoia Login Screen
+   Variables defined in variables.css
+   ================================ */
+
+.login-screen {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0 7vh;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    font-family: var(--font-system);
+}
+
+.login-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Clock (arriba) */
+.login-clock {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.login-date {
+    font-size: clamp(16px, 4vw, 24px);
+    font-weight: 600;
+    color: var(--white-80);
+    margin-bottom: 8px;
+}
+
+.login-time {
+    font-size: clamp(72px, 15vw, 100px);
+    font-weight: 500;
+    color: var(--white-85);
+    letter-spacing: -4px;
+    line-height: 1;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer (abajo) */
+.login-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+/* User - Avatar arriba, Nombre debajo */
+.login-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-avatar {
+    width: clamp(48px, 10vw, 64px);
+    height: clamp(48px, 10vw, 64px);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.login-username {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white-90);
+}
+
+/* Password row: pill + ? afuera */
+.login-password-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Spacer para balancear el icono ? y centrar el pill respecto al avatar */
+.login-password-row::before {
+    content: '';
+    width: 30px;
+}
+
+.login-password-pill {
+    width: min(200px, calc(100vw - 100px));
+    height: 30px;
+    background: rgba(60, 60, 60, 0.8);
+    border-radius: 15px;
+    border: 1px solid var(--white-10);
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+/* Enhanced blur effect for supporting browsers */
+@supports (backdrop-filter: blur(1px)) {
+    .login-password-pill {
+        background: var(--white-20);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+.login-password-pill:focus-within {
+    background: var(--white-25);
+    border-color: var(--white-15);
+}
+
+.login-password-input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: var(--font-system);
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.login-password-input::placeholder {
+    color: var(--white-50);
+
+}
+
+/* Icono ? con tooltip - mismo tamano que el input */
+.login-hint-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--white-15);
+    color: var(--white-60);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.login-hint-icon:hover {
+    background: var(--white-25);
+    color: #fff;
+}
+
+/* Tooltip en hover - aparece a la derecha */
+.login-hint-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.login-hint-icon::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-right-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.login-hint-icon:hover::after,
+.login-hint-icon:hover::before {
+    opacity: 1;
+}
+
+/* Remember me checkbox */
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.login-remember input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    accent-color: var(--white-80);
+    cursor: pointer;
+}
+
+.login-remember span {
+    font-size: 12px;
+    color: var(--white-60);
+}
+
+/* Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.login-password-pill.shake {
+    animation: shake 0.4s ease;
+}
+
+/* Loading spinner */
+.login-loading {
+    display: none;
+    margin-top: 20px;
+}
+
+.login-loading.visible {
+    display: block;
+}
+
+.login-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--white-20);
+    border-top-color: var(--white-80);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ================================
+   Responsive - Login
+   ================================ */
+
+/* Moviles y tablets: ocultar login, mostrar terminal directamente */
+@media (max-width: 768px) {
+    .login-screen {
+        display: none !important;
+    }
+}
+
+/* Tablets landscape (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-time {
+        font-size: clamp(56px, 12vw, 80px);
+    }
+}
+
+/* Large desktops (1440px+) */
+@media (min-width: 1440px) {
+    .login-time {
+        font-size: clamp(90px, 8vw, 120px);
+    }
+
+    .login-date {
+        font-size: 28px;
+    }
+}
+
+/* ================================
+   Accessibility - Login
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+    .login-password-pill.shake {
+        animation: none;
+    }
+}

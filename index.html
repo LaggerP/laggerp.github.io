@@ -1,62 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="HTML, CSS, JS, Responsive design, web developer, front end, programador web, html5, css3, bootstrap, grids, flexbox, react, angular, nodejs, mongodb, express, mysql, sql, full stack">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pablo Lagger - FullStack Developer</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/waves.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon"
-        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/technologist_1f9d1-200d-1f4bb.png">
-
-
+    <meta name="description" content="Pablo Lagger - Software Engineer specializing in Go, TypeScript, AWS serverless architectures and distributed systems">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta property="og:title" content="Pablo Lagger - Software Engineer">
+    <meta property="og:description" content="Senior Software Engineer specialized in distributed systems and cloud microservices">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laggerp.github.io">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pablo Lagger - Software Engineer">
+    <meta name="twitter:description" content="Senior Software Engineer specialized in distributed systems and cloud microservices">
+    <title>Pablo Lagger - Software Engineer</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/canvas.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/terminal-panel.css">
+    <link rel="stylesheet" href="styles/word-processor.css">
+    <link rel="stylesheet" href="styles/mobile-profile.css">
+    <link rel="stylesheet" href="styles/dock.css">
 </head>
-
 <body>
+    <!-- Starfield background (global) -->
+    <canvas id="starfield"></canvas>
 
+    <!-- macOS Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <!-- Clock (arriba) -->
+        <div class="login-clock">
+            <div class="login-date" id="login-date">Tuesday, January 7</div>
+            <div class="login-time" id="login-time">9:41</div>
+        </div>
 
-    <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner bgTop">
-
-
-            <div class="container">
-                <div class="cardCointainer">
-                    <h1>Hi, I'm Pablo Lagger</span> </h1>
-                    <p>> Backend dev at <a title="Enter Ualá website" href="https://ualabis.com.ar/" target="_blank"><img src="https://ualabis.com.ar/assets/images/ualabislogo.png"
-                        alt="uala-icon" style="width: 70px;"></a>.</p>
-                    
-                    <p>> Software Developer with high interest in Web Technologies, Blockchain and Secure Development.
-                    </p>
-                    <p>> Looking for challenging projects.</p>
-                    <p>> Working with JavaScript technologies, like Vanilla JavaScript, React, Node.js, MySQL, MongoDB,
-                        Express, and more...</p>
-                </div>
-                <div class="contactContainer">
-                    <a title="Enter personal LinkedIn" href="https://www.linkedin.com/in/pablo-lagger/" target="_blank">LinkedIn</a>
-                    <a title="Enter personal Github" href="https://github.com/LaggerP" target="_blank">GitHub</a>
-                </div>
+        <div class="login-footer">
+            <div class="login-user">
+                <img src="images/profile.png" alt="Pablo Lagger" class="login-avatar">
+                <span class="login-username">Pablo Lagger</span>
             </div>
-            <div class="wave waveTop"
-                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
-        </div>
-        <div class="waveWrapperInner bgMiddle">
-            <div class="wave waveMiddle"
-                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
-        </div>
-        <div class="waveWrapperInner bgBottom">
-            <div class="wave waveBottom"
-                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+
+            <div class="login-password-row">
+                <div class="login-password-pill" id="password-pill">
+                    <input
+                        id="password-input"
+                        type="password"
+                        class="login-password-input"
+                        placeholder="Enter Password (pablo)"
+                        autocomplete="off"
+                        data-lpignore="true"
+                        data-form-type="other"
+                        data-1p-ignore="true"
+                    >
+                </div>
+                <span class="login-hint-icon" data-tooltip="write pablo">?</span>
+            </div>
+
+            <label class="login-remember">
+                <input type="checkbox" id="remember-me">
+                <span>Remember me (skip login next time)</span>
+            </label>
+
+            <!-- Loading spinner -->
+            <div class="login-loading" id="login-loading">
+                <div class="login-spinner"></div>
+            </div>
         </div>
     </div>
-</body>
 
+    <div class="iterm-window">
+        <div class="iterm-titlebar">
+            <div class="traffic-lights">
+                <span class="light red"></span>
+                <span class="light yellow"></span>
+                <span class="light green"></span>
+            </div>
+            <div class="window-title">profile.plf - Pablo Lagger</div>
+        </div>
+
+        <!-- Word Document Style Profile -->
+        <div class="tab-content active" id="profile">
+     
+
+            <!-- Document Area -->
+            <div class="word-document-area">
+                <div class="word-page">
+                    <div class="word-margins">
+                        <!-- Document Header -->
+                        <div class="word-header">
+                            <img src="images/profile.png" alt="Pablo Lagger" class="word-avatar">
+                            <h1 class="word-title" id="profile-name"></h1>
+                            <p class="word-subtitle" id="profile-title"></p>
+                            <p class="word-location" id="profile-location"></p>
+                        </div>
+
+                        <!-- Document Body -->
+                        <div class="word-body">
+                            <!-- Bio -->
+                            <div class="word-section">
+                                <p class="word-bio" id="profile-bio"></p>
+                            </div>
+
+                            <!-- Skills -->
+                            <div class="word-section">
+                                <h2 class="word-heading">Core Competencies</h2>
+                                <div class="word-skills" id="skills-container"></div>
+                            </div>
+
+                            <!-- Experience -->
+                            <div class="word-section">
+                                <h2 class="word-heading">Professional Experience</h2>
+                                <div id="experience-container"></div>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="word-section">
+                                <h2 class="word-heading">Education & Certifications</h2>
+                                <div class="word-education" id="education-container"></div>
+                                <div class="word-certifications">
+                                    <h3>Certifications</h3>
+                                    <ul id="certifications-container"></ul>
+                                </div>
+                            </div>
+
+                            <!-- Contact -->
+                            <div class="word-section">
+                                <h2 class="word-heading">Contact</h2>
+                                <div class="word-contact" id="contact-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <!-- Mobile Profile (Terminal Style) -->
+            <div class="mobile-profile">
+                <div class="mobile-header">
+                    <img src="images/profile.png" alt="Pablo Lagger" class="mobile-avatar">
+                    <h1 class="mobile-name" id="mobile-name"></h1>
+                    <p class="mobile-title" id="mobile-title"></p>
+                    <p class="mobile-location" id="mobile-location"></p>
+                </div>
+
+                <p class="mobile-bio" id="mobile-bio"></p>
+
+                <div class="mobile-section">
+                    <h2 class="mobile-section-title">Skills</h2>
+                    <div class="mobile-skills" id="mobile-skills"></div>
+                </div>
+
+                <div class="mobile-section">
+                    <h2 class="mobile-section-title">Experience</h2>
+                    <div class="mobile-timeline" id="mobile-experience"></div>
+                </div>
+
+                <div class="mobile-section">
+                    <h2 class="mobile-section-title">Education</h2>
+                    <div class="mobile-education" id="mobile-education"></div>
+                    <div class="mobile-certifications">
+                        <h4>Certifications</h4>
+                        <ul id="mobile-certifications"></ul>
+                    </div>
+                </div>
+
+                <div class="mobile-section">
+                    <h2 class="mobile-section-title">Contact</h2>
+                    <div class="mobile-contact" id="mobile-contact"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- macOS Dock -->
+    <div class="dock-container" id="dock-container">
+        <div class="dock">
+            <div class="dock-item" data-app="profile" id="dock-profile">
+                <div class="dock-icon"></div>
+                <span class="dock-label">Profile</span>
+            </div>
+            <div class="dock-separator"></div>
+            <div class="dock-item" data-app="terminal" id="dock-terminal">
+                <div class="dock-icon"></div>
+                <span class="dock-label">Terminal</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/canvas.js" defer></script>
+    <script src="scripts/login.js" defer></script>
+    <script src="scripts/window-manager.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/dock.js" defer></script>
+</body>
 </html>

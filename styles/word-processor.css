@@ -1,0 +1,225 @@
+/* ================================
+   Word Processor Styling
+   Estilo Microsoft Word para Profile
+   ================================ */
+
+/* Override tab-content para layout Word */
+.tab-content#profile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ================================
+   DOCUMENT AREA
+   ================================ */
+.word-document-area {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #808080;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ================================
+   PAGE (Papel)
+   ================================ */
+.word-page {
+    background: #fff;
+    width: 8.5in;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    min-height: 100%;
+}
+
+.word-margins {
+    padding: 0.6in;
+    box-sizing: border-box;
+}
+
+/* ================================
+   DOCUMENT HEADER
+   ================================ */
+.word-header {
+    text-align: center;
+    margin-bottom: 0.4in;
+    padding-bottom: 0.2in;
+    border-bottom: 2px solid #333;
+}
+
+.word-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.word-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    letter-spacing: -0.3px;
+}
+
+.word-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 4px;
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-weight: 400;
+}
+
+.word-location {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+}
+
+/* ================================
+   DOCUMENT BODY
+   ================================ */
+.word-body {
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-size: 12px;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+/* ================================
+   SECTIONS
+   ================================ */
+.word-section {
+    margin-bottom: 0.25in;
+}
+
+.word-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0.3in 0 0.15in;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+}
+
+.word-bio {
+    margin: 0;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* ================================
+   SKILLS
+   ================================ */
+.word-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0.1in 0;
+}
+
+.word-skill-tag {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 11px;
+    color: #333;
+    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+}
+
+/* ================================
+   EXPERIENCE
+   ================================ */
+.word-job-entry {
+    margin-bottom: 0.2in;
+}
+
+.word-job-entry p {
+    margin: 0 0 4px;
+}
+
+.word-job-entry ul {
+    margin: 4px 0 8px;
+    padding-left: 0.3in;
+}
+
+.word-job-entry li {
+    margin-bottom: 2px;
+    line-height: 1.5;
+}
+
+/* ================================
+   EDUCATION
+   ================================ */
+.word-education p {
+    margin: 0 0 8px;
+}
+
+/* ================================
+   CERTIFICATIONS
+   ================================ */
+.word-certifications {
+    margin-top: 0.15in;
+}
+
+.word-certifications h3 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #333;
+}
+
+.word-certifications ul {
+    margin: 0;
+    padding-left: 0.25in;
+}
+
+.word-certifications li {
+    margin-bottom: 2px;
+}
+
+/* ================================
+   CONTACT
+   ================================ */
+.word-contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.word-contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 1024px) {
+    .word-page {
+        width: 95%;
+    }
+
+    .word-margins {
+        padding: 0.4in;
+    }
+}
+
+/* Mobile: Ocultar diseño Word completamente */
+@media (max-width: 768px) {
+    .word-document-area {
+        display: none !important;
+    }
+}

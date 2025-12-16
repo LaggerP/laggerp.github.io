@@ -1,0 +1,97 @@
+/* ================================
+   CSS Custom Properties
+   Centralized design tokens
+   ================================ */
+
+:root {
+    /* ================================
+       Typography
+       ================================ */
+    --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+
+    /* Font Sizes */
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 26px;
+
+    /* ================================
+       Colors - Login (white palette)
+       ================================ */
+    --white-90: rgba(255, 255, 255, 0.9);
+    --white-85: rgba(255, 255, 255, 0.85);
+    --white-80: rgba(255, 255, 255, 0.8);
+    --white-60: rgba(255, 255, 255, 0.6);
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-25: rgba(255, 255, 255, 0.25);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-15: rgba(255, 255, 255, 0.15);
+    --white-10: rgba(255, 255, 255, 0.1);
+
+    /* ================================
+       Colors - Portfolio (iTerm palette)
+       ================================ */
+    --bg-window: #1e1e1e;
+    --bg-titlebar: #323232;
+    --bg-tab-inactive: #2d2d2d;
+    --text-primary: #e4e4e4;
+    --text-secondary: #a0a0a0;
+    --text-muted: #6a6a6a;
+    --accent: #00d4aa;
+    --accent-blue: #61afef;
+    --accent-yellow: #e5c07b;
+    --accent-red: #e06c75;
+    --border-color: #404040;
+
+    /* ================================
+       Traffic Lights (macOS window buttons)
+       ================================ */
+    --traffic-red: #ff5f56;
+    --traffic-yellow: #ffbd2e;
+    --traffic-green: #27ca40;
+
+    /* ================================
+       Transitions
+       ================================ */
+    --transition-fast: all 0.15s ease;
+    --transition-default: all 0.2s ease;
+    --transition-slow: all 0.5s ease;
+
+    /* ================================
+       Shadows
+       ================================ */
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.7);
+    --shadow-glow: 0 0 15px rgba(0, 212, 170, 0.3);
+    --shadow-dock: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    /* ================================
+       Spacing
+       ================================ */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+
+    /* ================================
+       Border Radius
+       ================================ */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 10px;
+    --radius-full: 50%;
+
+    /* ================================
+       Z-Index Hierarchy
+       ================================ */
+    --z-base: 0;
+    --z-dropdown: 100;
+    --z-dock: 900;
+    --z-terminal: 1100;
+    --z-login: 9999;
+}

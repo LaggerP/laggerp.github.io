@@ -1,0 +1,234 @@
+/* ================================
+   Terminal Panel - Modal
+   Panel flotante estilo iTerm
+   ================================ */
+
+/* Overlay - invisible, solo para cerrar con click fuera */
+.terminal-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.terminal-panel-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Panel container */
+.terminal-panel {
+    position: fixed;
+    top: calc(50% - 35px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(80vw, 900px);
+    height: min(70vh, 600px);
+    background: var(--bg-window);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.terminal-panel.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.terminal-panel.dragging {
+    transition: none;
+    cursor: grabbing;
+}
+
+/* Titlebar */
+.terminal-panel-titlebar {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-titlebar);
+    border-bottom: 1px solid var(--border-color);
+    user-select: none;
+    cursor: grab;
+}
+
+.terminal-panel-titlebar:active {
+    cursor: grabbing;
+}
+
+.terminal-panel-titlebar .traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-panel-titlebar .light {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.terminal-panel-titlebar .light.red {
+    background: var(--traffic-red);
+}
+
+.terminal-panel-titlebar .light.red:hover {
+    filter: brightness(1.2);
+}
+
+.terminal-panel-titlebar .light.yellow {
+    background: var(--traffic-yellow);
+}
+
+.terminal-panel-titlebar .light.yellow:hover {
+    filter: brightness(1.2);
+}
+
+.terminal-panel-titlebar .light.green {
+    background: var(--traffic-green);
+}
+
+.terminal-panel-titlebar .light.green:hover {
+    filter: brightness(1.2);
+}
+
+.terminal-panel-title {
+    flex: 1;
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: var(--font-system);
+    font-size: 13px;
+}
+
+/* Content area */
+.terminal-panel-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Terminal output */
+.terminal-panel .panel-output {
+    flex: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.terminal-panel .panel-line {
+    margin-bottom: 2px;
+}
+
+.terminal-panel .panel-line .output-prompt {
+    color: var(--accent);
+}
+
+.terminal-panel .panel-line .output-command {
+    color: var(--text-primary);
+}
+
+.terminal-panel .panel-line .output-text {
+    color: var(--text-primary);
+    white-space: pre-wrap;
+}
+
+.terminal-panel .panel-line .output-title {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.terminal-panel .panel-line .output-subtitle {
+    color: var(--accent-blue);
+}
+
+.terminal-panel .panel-line .output-muted {
+    color: var(--text-muted);
+}
+
+.terminal-panel .panel-line .output-error {
+    color: var(--accent-red);
+}
+
+.terminal-panel .panel-line .cmd-highlight {
+    color: var(--accent-yellow);
+}
+
+.terminal-panel .panel-line a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.terminal-panel .panel-line a:hover {
+    text-decoration: underline;
+}
+
+/* Input line */
+.terminal-panel .panel-input-line {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-window);
+}
+
+.terminal-panel .panel-input-line .prompt {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    margin-right: var(--spacing-sm);
+    white-space: nowrap;
+}
+
+.terminal-panel .panel-input-line input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    outline: none;
+}
+
+/* Minimized state */
+.terminal-panel.minimized {
+    height: auto;
+}
+
+.terminal-panel.minimized .terminal-panel-content {
+    display: none;
+}
+
+/* Maximized state */
+.terminal-panel.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terminal-panel-overlay,
+    .terminal-panel {
+        display: none;
+    }
+}

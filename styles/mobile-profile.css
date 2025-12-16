@@ -1,0 +1,267 @@
+/* ================================
+   Mobile Profile - Terminal Style
+   Diseño terminal con timeline para mobile
+   ================================ */
+
+/* Solo visible en mobile */
+.mobile-profile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-profile {
+        display: block;
+        padding: 20px 16px;
+        color: var(--text-primary);
+        font-family: var(--font-mono);
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    /* ================================
+       HEADER
+       ================================ */
+    .mobile-header {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .mobile-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 12px;
+        border: 2px solid var(--accent);
+        box-shadow: 0 0 15px rgba(0, 212, 170, 0.3);
+    }
+
+    .mobile-name {
+        font-size: 1.8em;
+        color: var(--accent);
+        margin: 0 0 8px;
+        font-weight: 600;
+    }
+
+    .mobile-title {
+        font-size: 1em;
+        color: var(--text-primary);
+        margin: 0 0 4px;
+    }
+
+    .mobile-location {
+        font-size: 0.85em;
+        color: var(--text-secondary);
+        margin: 0;
+    }
+
+    /* ================================
+       BIO
+       ================================ */
+    .mobile-bio {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        font-size: 0.9em;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* ================================
+       SECTIONS
+       ================================ */
+    .mobile-section {
+        margin-bottom: 24px;
+    }
+
+    .mobile-section-title {
+        color: var(--accent);
+        font-size: 0.95em;
+        font-weight: 500;
+        margin: 0 0 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .mobile-section-title::before {
+        content: '> ';
+        color: var(--accent);
+    }
+
+    /* ================================
+       SKILLS
+       ================================ */
+    .mobile-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .mobile-skill-tag {
+        background-color: rgba(0, 212, 170, 0.1);
+        color: var(--accent);
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        border: 1px solid rgba(0, 212, 170, 0.3);
+    }
+
+    /* ================================
+       EXPERIENCE - TIMELINE
+       ================================ */
+    .mobile-timeline {
+        position: relative;
+        margin-left: 8px;
+        padding-left: 25px;
+    }
+
+    .mobile-timeline::before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--accent), var(--border-color));
+    }
+
+    .mobile-job {
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    .mobile-job:last-child {
+        margin-bottom: 0;
+    }
+
+    .mobile-job-node {
+        position: absolute;
+        left: -25px;
+        top: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--bg-window);
+        border: 2px solid var(--accent);
+    }
+
+    .mobile-job.current .mobile-job-node {
+        background-color: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+    }
+
+    .mobile-job-company {
+        color: var(--accent-blue);
+        font-size: 1em;
+        margin: 0 0 4px;
+        font-weight: 500;
+    }
+
+    .mobile-job-tenure {
+        color: var(--text-muted);
+        font-size: 0.8em;
+        margin-bottom: 12px;
+    }
+
+    .mobile-role {
+        margin-bottom: 12px;
+    }
+
+    .mobile-role-title {
+        color: var(--text-primary);
+        font-size: 0.9em;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .mobile-role-period {
+        color: var(--text-muted);
+        font-size: 0.75em;
+        margin-bottom: 8px;
+    }
+
+    .mobile-role-responsibilities {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .mobile-role-responsibilities li {
+        color: var(--text-secondary);
+        margin-bottom: 6px;
+        padding-left: 16px;
+        position: relative;
+        font-size: 0.85em;
+        line-height: 1.5;
+    }
+
+    .mobile-role-responsibilities li::before {
+        content: ">";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+    }
+
+    /* ================================
+       EDUCATION
+       ================================ */
+    .mobile-education p {
+        color: var(--text-secondary);
+        margin: 0 0 8px;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .mobile-education strong {
+        color: var(--text-primary);
+    }
+
+    /* ================================
+       CERTIFICATIONS
+       ================================ */
+    .mobile-certifications {
+        margin-top: 16px;
+    }
+
+    .mobile-certifications h4 {
+        color: var(--accent-yellow);
+        font-size: 0.9em;
+        font-weight: 500;
+        margin: 0 0 10px;
+    }
+
+    .mobile-certifications ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .mobile-certifications li {
+        color: var(--text-secondary);
+        margin-bottom: 6px;
+        padding-left: 16px;
+        position: relative;
+        font-size: 0.85em;
+    }
+
+    .mobile-certifications li::before {
+        content: "~";
+        color: var(--accent-yellow);
+        position: absolute;
+        left: 0;
+    }
+
+    /* ================================
+       CONTACT
+       ================================ */
+    .mobile-contact a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .mobile-contact a:hover {
+        text-decoration: underline;
+    }
+}
