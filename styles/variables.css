@@ -45,6 +45,8 @@
     --accent-yellow: #e5c07b;
     --accent-red: #e06c75;
     --border-color: #404040;
+    --tab-hover: #3a3a3a;
+    --scrollbar-hover: #555;
 
     /* ================================
        Traffic Lights (macOS window buttons)
@@ -66,7 +68,6 @@
     --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.5);
     --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.7);
-    --shadow-glow: 0 0 15px rgba(0, 212, 170, 0.3);
     --shadow-dock: 0 4px 12px rgba(0, 0, 0, 0.3);
 
     /* ================================
@@ -76,7 +77,6 @@
     --spacing-sm: 8px;
     --spacing-md: 12px;
     --spacing-lg: 20px;
-    --spacing-xl: 30px;
 
     /* ================================
        Border Radius
@@ -92,6 +92,38 @@
     --z-base: 0;
     --z-dropdown: 100;
     --z-dock: 900;
+    --z-menubar: 910;
     --z-terminal: 1100;
     --z-login: 9999;
+
+    /* ================================
+       Word Processor Font
+       ================================ */
+    --font-word: 'Calibri', 'Segoe UI', var(--font-system);
+
+    /* ================================
+       Light Theme Colors
+       ================================ */
+    --text-primary-light: #1a1a1a;
+    --text-secondary-light: #555555;
+    --text-muted-light: #888888;
+    --bg-window-light: #f5f5f5;
+    --bg-titlebar-light: #ececec;
+    --bg-tab-inactive-light: #e0e0e0;
+    --border-color-light: rgba(0, 0, 0, 0.1);
+    --accent-light: #00b894;
+}
+
+/* ================================
+   Light Theme Override
+   ================================ */
+[data-theme="light"] {
+    --bg-window: var(--bg-window-light);
+    --bg-titlebar: var(--bg-titlebar-light);
+    --bg-tab-inactive: var(--bg-tab-inactive-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-muted: var(--text-muted-light);
+    --border-color: var(--border-color-light);
+    --accent: var(--accent-light);
 }

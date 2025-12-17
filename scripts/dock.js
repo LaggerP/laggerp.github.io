@@ -12,6 +12,7 @@
     let dockContainer = null;
     let dockProfile = null;
     let dockTerminal = null;
+    let dockVampire = null;
     let terminalPanel = null;
     let panelOutput = null;
     let panelInput = null;
@@ -33,10 +34,38 @@
         dockContainer = document.getElementById('dock-container');
         dockProfile = document.getElementById('dock-profile');
         dockTerminal = document.getElementById('dock-terminal');
+        dockVampire = document.getElementById('dock-vampire');
 
         createTerminalPanel();
         attachEventListeners();
+        initWindowEventListeners();
         waitForLoginComplete();
+    }
+
+    // ================================
+    // Window Events → Dock State (Centralized)
+    // ================================
+    function initWindowEventListeners() {
+        const dockItems = {
+            'profile': dockProfile,
+            'terminal': dockTerminal,
+            'vampire': dockVampire
+        };
+
+        // window:minimize → Keep indicator (app is still "open", just minimized)
+        document.addEventListener('window:minimize', (e) => {
+            // Do nothing - indicator stays active
+        });
+
+        document.addEventListener('window:restore', (e) => {
+            const item = dockItems[e.detail.windowId];
+            if (item) item.classList.add('active');
+        });
+
+        document.addEventListener('window:close', (e) => {
+            const item = dockItems[e.detail.windowId];
+            if (item) item.classList.remove('active');
+        });
     }
 
     // ================================
@@ -70,8 +99,10 @@
     function showDock() {
         if (dockContainer) {
             dockContainer.classList.add('visible');
-            // Profile esta activo por defecto
-            dockProfile.classList.add('active');
+            // Profile is active by default - dispatch event to activate dock indicator
+            document.dispatchEvent(new CustomEvent('window:restore', {
+                detail: { windowId: 'profile' }
+            }));
         }
     }
 
@@ -85,9 +116,9 @@
         terminalPanel.innerHTML = `
             <div class="terminal-panel-titlebar">
                 <div class="traffic-lights">
-                    <span class="light red" id="panel-close"></span>
-                    <span class="light yellow" id="panel-minimize"></span>
-                    <span class="light green" id="panel-maximize"></span>
+                    <span class="light red"></span>
+                    <span class="light yellow"></span>
+                    <span class="light green"></span>
                 </div>
                 <span class="terminal-panel-title">pablo@portfolio — terminal</span>
             </div>
@@ -122,16 +153,37 @@
         // Dock Profile click - restaurar ventana
         dockProfile.addEventListener('click', () => {
             // Use global profileWindowManager from index.js
+            // restore() will dispatch window:restore event → dock indicator updated automatically
             if (typeof profileWindowManager !== 'undefined' && profileWindowManager) {
                 profileWindowManager.restore();
             }
-            dockProfile.classList.add('active');
+            // Update menubar
+            if (typeof MenubarManager !== 'undefined') {
+                MenubarManager.setActiveApp('Profile');
+            }
         });
 
         // Dock Terminal click - abrir terminal
         dockTerminal.addEventListener('click', () => {
             openTerminal();
+            // Update menubar
+            if (typeof MenubarManager !== 'undefined') {
+                MenubarManager.setActiveApp('Terminal');
+            }
         });
+
+        // Dock Vampire click - abrir juego
+        if (dockVampire) {
+            dockVampire.addEventListener('click', () => {
+                if (typeof openVampireGame === 'function') {
+                    openVampireGame();
+                }
+                // Update menubar
+                if (typeof MenubarManager !== 'undefined') {
+                    MenubarManager.setActiveApp('Vampire Survivors');
+                }
+            });
+        }
 
         // Close with Escape
         document.addEventListener('keydown', (e) => {
@@ -157,6 +209,7 @@
         terminalWindowManager = new WindowManager({
             element: terminalPanel,
             titlebar: titlebar,
+            windowId: 'terminal',
             preventDragOn: ['.traffic-lights'],
             trafficLights: {
                 close: lights[0],
@@ -164,13 +217,17 @@
                 maximize: lights[2]
             },
             onClose: () => {
-                // Reset position on close
-                terminalWindowManager.resetPosition();
+                // Position reset automatically by close()
                 terminalPanel.classList.remove('active');
-                dockTerminal.classList.remove('active');
-            },
-            onMinimize: () => {
-                // No dock update needed for minimize
+                // Dock indicator updated automatically via window:close event
+                // Update menubar - check if Profile is visible
+                if (typeof MenubarManager !== 'undefined') {
+                    const profileWindow = document.querySelector('.iterm-window');
+                    const profileVisible = profileWindow &&
+                        !profileWindow.classList.contains('minimized') &&
+                        profileWindow.classList.contains('visible');
+                    MenubarManager.setActiveApp(profileVisible ? 'Profile' : 'Pablo Lagger');
+                }
             },
             onMaximize: () => {
                 panelInput.focus();
@@ -187,9 +244,14 @@
     function openTerminal() {
         if (terminalWindowManager && terminalWindowManager.isMinimized()) {
             terminalWindowManager.restore();
+        } else {
+            // If not minimized, manually dispatch restore event for dock indicator
+            document.dispatchEvent(new CustomEvent('window:restore', {
+                detail: { windowId: 'terminal' }
+            }));
         }
         terminalPanel.classList.add('active');
-        dockTerminal.classList.add('active');
+        // Dock indicator updated automatically via window:restore event
         // Delay focus to ensure panel is visible after CSS transition
         setTimeout(() => panelInput.focus(), 50);
     }

@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="styles/word-processor.css">
     <link rel="stylesheet" href="styles/mobile-profile.css">
     <link rel="stylesheet" href="styles/dock.css">
+    <link rel="stylesheet" href="styles/menubar.css">
+    <link rel="stylesheet" href="styles/vampire-game.css">
 </head>
 <body>
     <!-- Starfield background (global) -->
@@ -172,6 +174,53 @@
         </div>
     </div>
 
+    <!-- Vampire Survivors Game Window -->
+    <div class="vampire-window" id="vampire-window">
+        <div class="vampire-titlebar">
+            <div class="traffic-lights">
+                <span class="light red"></span>
+                <span class="light yellow"></span>
+                <span class="light green"></span>
+            </div>
+            <span class="vampire-title">Pablo Survivor - The Game</span>
+        </div>
+        <div class="vampire-content">
+            <div class="game-hud">
+                <span>Wave: <span id="game-wave">1</span></span>
+                <span>Score: <span id="game-score">0</span></span>
+                <span>HP: <span id="game-hp">██████████</span></span>
+            </div>
+            <pre class="game-canvas" id="game-canvas"></pre>
+            <div class="game-controls">WASD/Arrows: Move | Auto-attack enabled</div>
+
+            <!-- Start Overlay -->
+            <div class="game-start-overlay">
+                <div class="game-start-title">PABLO SURVIVORS</div>
+                <div class="game-start-subtitle">The Game</div>
+                <button class="game-start-button">START GAME</button>
+            </div>
+
+            <!-- Pause Menu Overlay -->
+            <div class="game-pause-overlay" id="game-pause-overlay">
+                <div class="game-pause-box">
+                    <div class="pause-title">PAUSED</div>
+                    <button class="pause-button" id="pause-continue">Continue</button>
+                    <button class="pause-button" id="pause-restart">Restart</button>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div class="game-over-overlay">
+                <div class="game-over-box">
+                    <div class="title">GAME OVER</div>
+                    <div class="stats">Wave: 1
+Score: 0</div>
+                    <div class="retry">Press R to retry</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- macOS Dock -->
     <div class="dock-container" id="dock-container">
         <div class="dock">
@@ -179,10 +228,13 @@
                 <div class="dock-icon"></div>
                 <span class="dock-label">Profile</span>
             </div>
-            <div class="dock-separator"></div>
             <div class="dock-item" data-app="terminal" id="dock-terminal">
                 <div class="dock-icon"></div>
                 <span class="dock-label">Terminal</span>
+            </div>
+            <div class="dock-item" data-app="vampire" id="dock-vampire">
+                <div class="dock-icon"></div>
+                <span class="dock-label">Vampire</span>
             </div>
         </div>
     </div>
@@ -190,8 +242,10 @@
     <script src="scripts/data.js" defer></script>
     <script src="scripts/canvas.js" defer></script>
     <script src="scripts/login.js" defer></script>
+    <script src="scripts/menubar.js" defer></script>
     <script src="scripts/window-manager.js" defer></script>
     <script src="scripts/index.js" defer></script>
     <script src="scripts/dock.js" defer></script>
+    <script src="scripts/vampire-game.js" defer></script>
 </body>
 </html>

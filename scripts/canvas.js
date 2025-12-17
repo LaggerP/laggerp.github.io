@@ -172,7 +172,7 @@
             }
 
             // 3D to 2D projection
-            var pos = projectParticle(particle, cx, cy);
+            const pos = projectParticle(particle, cx, cy);
 
             // Render dust particle
             ctx.globalAlpha = particle.opacity;
@@ -207,7 +207,7 @@
             }
 
             // 3D to 2D projection
-            var pos = projectParticle(star, cx, cy);
+            const pos = projectParticle(star, cx, cy);
 
             // Size based on depth (closer = larger) and brightness
             const size = (1 - star.z / canvas.width) * maxSize * star.brightness;

@@ -81,11 +81,10 @@ function initProfileWindow() {
 
     if (!windowEl || !titlebar) return;
 
-    const dockProfile = document.getElementById('dock-profile');
-
     profileWindowManager = new WindowManager({
         element: windowEl,
         titlebar: titlebar,
+        windowId: 'profile',
         preventDragOn: ['.traffic-lights'],
         trafficLights: {
             close: lights[0],
@@ -93,24 +92,39 @@ function initProfileWindow() {
             maximize: lights[2]
         },
         onClose: () => {
-            profileWindowManager.resetPosition();
-            if (dockProfile) dockProfile.classList.remove('active');
+            // Position reset automatically by close()
+            // Dock indicator updated automatically via window:close event
+            // Update menubar - check if Terminal is active
+            if (typeof MenubarManager !== 'undefined') {
+                const terminalActive = document.querySelector('.terminal-panel.active');
+                MenubarManager.setActiveApp(terminalActive ? 'Terminal' : 'Pablo Lagger');
+            }
         },
         onMinimize: () => {
-            profileWindowManager.resetPosition();
-            if (dockProfile) dockProfile.classList.remove('active');
+            // Position kept (not reset) - user expects window to restore where it was
+            // Dock indicator stays active via window:minimize event
+            // Update menubar - check if Terminal is active
+            if (typeof MenubarManager !== 'undefined') {
+                const terminalActive = document.querySelector('.terminal-panel.active');
+                MenubarManager.setActiveApp(terminalActive ? 'Terminal' : 'Pablo Lagger');
+            }
         },
         onRestore: () => {
-            if (dockProfile) dockProfile.classList.add('active');
+            // Dock indicator updated automatically via window:restore event
+            // Update menubar
+            if (typeof MenubarManager !== 'undefined') {
+                MenubarManager.setActiveApp('Profile');
+            }
         }
     });
 }
 
-// Inicializar Window Manager cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', initProfileWindow);
-
+// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize DOM cache first
+    // Initialize profile window manager
+    initProfileWindow();
+
+    // Initialize DOM cache
     initDomCache();
 
     // Easter egg: Tuki meme
@@ -144,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Pablo Lagger
 `);
 
-    // Render profile immediately
+    // Render profile
     renderProfile();
 });
 

@@ -21,6 +21,7 @@
          * @param {Function} options.onMinimize - Callback when minimized
          * @param {Function} options.onMaximize - Callback when maximized
          * @param {Function} options.onRestore - Callback when restored
+         * @param {string} options.windowId - Identifier for window events
          */
         constructor(options) {
             if (!options.element) {
@@ -32,6 +33,7 @@
             this.titlebar = options.titlebar || this.element.querySelector('.titlebar');
             this.minVisible = options.minVisible ?? 50;
             this.preventDragOn = options.preventDragOn || ['.traffic-lights'];
+            this.windowId = options.windowId || null;
 
             // CSS classes
             this.classes = {
@@ -116,13 +118,15 @@
             let newX = e.clientX - this.state.dragOffset.x;
             let newY = e.clientY - this.state.dragOffset.y;
 
-            // Viewport boundary constraints
+            // Viewport boundary constraints - keep window fully inside viewport
             const rect = this.element.getBoundingClientRect();
-            newX = Math.max(
-                -rect.width + this.minVisible,
-                Math.min(newX, window.innerWidth - this.minVisible)
-            );
-            newY = Math.max(0, Math.min(newY, window.innerHeight - this.minVisible));
+            const menubar = document.querySelector('.menubar');
+            const menubarHeight = menubar ? menubar.offsetHeight : 0;
+            const maxX = window.innerWidth - rect.width;
+            const maxY = window.innerHeight - rect.height;
+
+            newX = Math.max(0, Math.min(newX, maxX));
+            newY = Math.max(menubarHeight, Math.min(newY, maxY));
 
             this.element.style.left = newX + 'px';
             this.element.style.top = newY + 'px';
@@ -180,6 +184,13 @@
             this.state.isMinimized = true;
             this.element.classList.add(this.classes.minimized);
 
+            // Dispatch event
+            if (this.windowId) {
+                document.dispatchEvent(new CustomEvent('window:minimize', {
+                    detail: { windowId: this.windowId }
+                }));
+            }
+
             if (this.onMinimize) {
                 this.onMinimize();
             }
@@ -199,6 +210,13 @@
                 this.element.style.left = this.state.savedPosition.x + 'px';
                 this.element.style.top = this.state.savedPosition.y + 'px';
                 this.element.style.transform = 'none';
+            }
+
+            // Dispatch event
+            if (this.windowId) {
+                document.dispatchEvent(new CustomEvent('window:restore', {
+                    detail: { windowId: this.windowId }
+                }));
             }
 
             if (this.onRestore) {
@@ -226,8 +244,25 @@
         }
 
         close() {
-            // Default close behavior: minimize
-            this.minimize();
+            // If maximized, restore first
+            if (this.state.isMaximized) {
+                this.element.classList.remove(this.classes.maximized);
+                this.state.isMaximized = false;
+            }
+
+            // Hide window (same visual effect as minimize)
+            this.state.isMinimized = true;
+            this.element.classList.add(this.classes.minimized);
+
+            // Reset position for next open (difference from minimize)
+            this.resetPosition();
+
+            // Dispatch close event (NOT minimize - different behavior)
+            if (this.windowId) {
+                document.dispatchEvent(new CustomEvent('window:close', {
+                    detail: { windowId: this.windowId }
+                }));
+            }
 
             if (this.onClose) {
                 this.onClose();

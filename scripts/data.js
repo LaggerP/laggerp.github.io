@@ -66,7 +66,7 @@ const portfolioData = {
     "education": [
         {
             "institution": "UADE (Universidad Argentina de la Empresa)",
-            "degree": "Bachelor's Degree in Information Technology Management (Systems)",
+            "degree": "Bachelor's Degree in Information Technology Management",
             "period": "Mar 2016 - Dec 2021"
         },
         {

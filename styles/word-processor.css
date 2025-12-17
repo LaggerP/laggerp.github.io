@@ -66,7 +66,7 @@
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 6px;
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
     letter-spacing: -0.3px;
 }
 
@@ -74,7 +74,7 @@
     font-size: 14px;
     color: #555;
     margin: 0 0 4px;
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
     font-weight: 400;
 }
 
@@ -82,14 +82,14 @@
     font-size: 12px;
     color: #777;
     margin: 0;
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
 }
 
 /* ================================
    DOCUMENT BODY
    ================================ */
 .word-body {
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
     font-size: 12px;
     line-height: 1.6;
     color: #1a1a1a;
@@ -111,7 +111,7 @@
     letter-spacing: 1px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 4px;
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
 }
 
 .word-bio {
@@ -137,7 +137,7 @@
     border-radius: 2px;
     font-size: 11px;
     color: #333;
-    font-family: 'Calibri', 'Segoe UI', var(--font-system);
+    font-family: var(--font-word);
 }
 
 /* ================================

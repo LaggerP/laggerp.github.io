@@ -150,7 +150,7 @@ body {
 
 .tab:hover,
 .tab:focus {
-    background-color: #3a3a3a;
+    background-color: var(--tab-hover);
     outline: none;
 }
 
@@ -200,12 +200,29 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--scrollbar-hover);
 }
 
 /* ================================
    Responsive
    ================================ */
+
+/* Desktop: Menubar compensation */
+@media (min-width: 769px) {
+    body {
+        padding-top: 24px;
+    }
+
+    .iterm-window {
+        top: calc(50% - 23px); /* Adjusted for menubar */
+    }
+
+    /* Maximized state accounts for menubar */
+    .iterm-window.maximized {
+        top: 24px !important;
+        height: calc(100vh - 24px);
+    }
+}
 
 /* Tablets / Small laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
